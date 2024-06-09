@@ -1,0 +1,308 @@
+{
+    "certificateAuthorities": {
+      "inphb-ca.inphb": {
+        "caName": "ca",
+        "registrar": {
+          "enrollId": "enroll",
+          "enrollSecret": "enrollpw"
+        },
+        "tlsCACerts": {
+          "pem": [
+            "-----BEGIN CERTIFICATE-----\nMIICcTCCAhegAwIBAgIQZAgtZTH1co8dAvGi9DDqMjAKBggqhkjOPQQDAjBSMRMw\nEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE\nChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0MDda\nFw0zNDA0MjgxMjU0MDdaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT\nADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi\ncmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfCQwvQ2lOkY8e0MptC1Nm4DB\nprZjGGsnh/84iBfoKbn8zH1tChb0F88YXA/9P6btrcD/Au/5RLiJATmGRQpQeaOB\nzjCByzAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIBugdfmrnLYcEAegXhO1hwt0\nPhVVxPPMTPPPAhT+gy8ZMF4GA1UdEQRXMFWCCWxvY2FsaG9zdIIIaW5waGItY2GC\nDmlucGhiLWNhLmlucGhigihpbnBoYi1jYS5pbnBoYi5ibG9ja2NoYWluLmtpYmFy\nb2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIQD0QkuStOyjSmv6lmuJ\nS8CVeYz6RTj3XhB9ulYIiN5pBAIgSEFgFyugkKG6t4B1TYEfu9M8BhtEK6/QoP0a\n27he1nA=\n-----END CERTIFICATE-----\n"
+          ]
+        },
+        "url": "https://inphb-ca.inphb.blockchain.kibarocert.com:443"
+      },
+      "kibarocert-ca.kibarocert": {
+        "caName": "ca",
+        "registrar": {
+          "enrollId": "enroll",
+          "enrollSecret": "enrollpw"
+        },
+        "tlsCACerts": {
+          "pem": [
+            "-----BEGIN CERTIFICATE-----\nMIICizCCAjGgAwIBAgIRAPqTy8mVzVhqi/K3AHmkCrQwCgYIKoZIzj0EAwIwUjET\nMBEGA1UEBhMKQ2FsaWZvcm5pYTEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxFDASBgNV\nBAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMwHhcNMjQwNDI3MTI1MzA5\nWhcNMzQwNDI4MTI1MzA5WjBSMRMwEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQH\nEwAxCTAHBgNVBAkTADEUMBIGA1UEChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZh\nYnJpYzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAkheiM3tyS8k2dbThpR7VqA\nEHRDIG2uX27USIly325dgluzxKRy6AuUjZ6BaEv1ZQWhyHRRkQhejYO1WO4ZDSSj\ngecwgeQwDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF\nBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCO4dvzgoO/5cvPdOkrQ812\naxsQbdZBOB9KwrVWigfzpzB3BgNVHREEcDBugglsb2NhbGhvc3SCDWtpYmFyb2Nl\ncnQtY2GCGGtpYmFyb2NlcnQtY2Eua2liYXJvY2VydIIya2liYXJvY2VydC1jYS5r\naWJhcm9jZXJ0LmJsb2NrY2hhaW4ua2liYXJvY2VydC5jb22HBH8AAAEwCgYIKoZI\nzj0EAwIDSAAwRQIgKw62p4zz6dYMdBv4XK93EaXl+PpqEuZJj0HTJRP7/IYCIQDK\nrnVqv1d1IHv8V2G+TGTIkros2M6+b9+uamscrWL/iQ==\n-----END CERTIFICATE-----\n"
+          ]
+        },
+        "url": "https://kibarocert-ca.kibarocert.blockchain.kibarocert.com:443"
+      },
+      "montpellier-bs-ca.montpellier-bs": {
+        "caName": "ca",
+        "registrar": {
+          "enrollId": "enroll",
+          "enrollSecret": "enrollpw"
+        },
+        "tlsCACerts": {
+          "pem": [
+            "-----BEGIN CERTIFICATE-----\nMIICoTCCAkegAwIBAgIQQsmxIo0zZB5HLNGgUGzc+zAKBggqhkjOPQQDAjBSMRMw\nEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE\nChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0Mzla\nFw0zNDA0MjgxMjU0MzlaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT\nADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi\ncmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKEwRkNwFfAFKiQkNibbSiTN+\njDXy0tbquNRDM+G1OWjwpcc/IZrDCd3GJuWGfKveIigEesZxN90X4pLR2X+ylaOB\n/jCB+zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIIKL15Ifd9oqvUXtbg4xVxN5\nV1+hXD97rm7EZjpBwWjPMIGNBgNVHREEgYUwgYKCCWxvY2FsaG9zdIIRbW9udHBl\nbGxpZXItYnMtY2GCIG1vbnRwZWxsaWVyLWJzLWNhLm1vbnRwZWxsaWVyLWJzgjpt\nb250cGVsbGllci1icy1jYS5tb250cGVsbGllci1icy5ibG9ja2NoYWluLmtpYmFy\nb2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIGdrBXIjPIXlWHMqT1hd\nZ2dUKCI0TVdaDwMkJs92aBJqAiEAzck8YRPU+rJiqvtVtVm/WuFYcqjm0ZVWCsAn\nIM0R6pw=\n-----END CERTIFICATE-----\n"
+          ]
+        },
+        "url": "https://montpellier-bs-ca.montpellier-bs.blockchain.kibarocert.com:443"
+      },
+      "orderer-ca.orderer": {
+        "caName": "ca",
+        "registrar": {
+          "enrollId": "enroll",
+          "enrollSecret": "enrollpw"
+        },
+        "tlsCACerts": {
+          "pem": [
+            "-----BEGIN CERTIFICATE-----\nMIICfDCCAiGgAwIBAgIQRM37Ok8R62JTFiYcw1nw9zAKBggqhkjOPQQDAjBSMRMw\nEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE\nChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA1MDUwMjI3MzVa\nFw0zNDA1MDYwMjI3MzVaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT\nADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi\ncmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKUZWgL2gfgdGqBRF+AiVQPQ3\nWH+jWmqOfRkbaGK4u2/opZ6ewJNaiHjb3CTejYzwBo2cDa78s0zPS5GAMI9kx6OB\n2DCB1TAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF\nBwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIAXo1MuQ0/7WA12YKbRyehV3\n/jZ2HAxQa672Y69OMXjwMGgGA1UdEQRhMF+CCWxvY2FsaG9zdIIKb3JkZXJlci1j\nYYISb3JkZXJlci1jYS5vcmRlcmVygixvcmRlcmVyLWNhLm9yZGVyZXIuYmxvY2tj\naGFpbi5raWJhcm9jZXJ0LmNvbYcEfwAAATAKBggqhkjOPQQDAgNJADBGAiEA6HLp\niwim8ZTWrwZbB7yU1eNtkAVohehJ5XJhYsoEticCIQCJNT8bAXlFHiO4nIdtqdWU\niA2DYDhz7HOpaWQinl7vEg==\n-----END CERTIFICATE-----\n"
+          ]
+        },
+        "url": "https://orderer-ca.orderer.blockchain.kibarocert.com:443"
+      }
+    },
+    "channels": {
+      "certificates": {
+        "orderers": [
+          "orderer-node1.orderer",
+          "orderer-node2.orderer",
+          "orderer-node3.orderer",
+          "orderer-node4.orderer",
+          "orderer-node5.orderer"
+        ],
+        "peers": {
+          "inphb-peer1.inphb": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "inphb-peer2.inphb": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "kibarocert-peer1.kibarocert": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "kibarocert-peer2.kibarocert": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "kibarocert-peer3.kibarocert": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "montpellier-bs-peer1.montpellier-bs": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          },
+          "montpellier-bs-peer2.montpellier-bs": {
+            "chaincodeQuery": true,
+            "discover": true,
+            "endorsingPeer": true,
+            "eventSource": true,
+            "ledgerQuery": true
+          }
+        }
+      }
+    },
+    "client": {
+      "organization": "kibarocertMSP"
+    },
+    "name": "hlf-network",
+    "orderers": {
+      "orderer-node1.orderer": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQF6kgnmdMQt3bTtvCcFNsRTAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA1MDUwMjI3MzVaFw0zNDA1MDYwMjI3MzVaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErRZKQC0lDRyZ5JjA\nJJrPsPj/L3mLTJppi2zvJA5dElhwkKwUN/LeJ7baUd9ap8cnrbbhFYw18465C7mL\n1pG8OKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBj6cBQu7n0nh5HnXAz\nfWbtmt3PIS92Tqn9cf4kWy96fjAKBggqhkjOPQQDAgNIADBFAiBQpKgzPxZC6h6H\nE9YlYab+6DrW8F8zs4RVRbfd7x7t2AIhALgu+KKwfZ+EFF3fNgMQnAVsj6wLzOQY\n9/AhgkLLQiMW\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://orderer1-ord.orderer.blockchain.kibarocert.com:443"
+      },
+      "orderer-node2.orderer": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQF6kgnmdMQt3bTtvCcFNsRTAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA1MDUwMjI3MzVaFw0zNDA1MDYwMjI3MzVaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErRZKQC0lDRyZ5JjA\nJJrPsPj/L3mLTJppi2zvJA5dElhwkKwUN/LeJ7baUd9ap8cnrbbhFYw18465C7mL\n1pG8OKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBj6cBQu7n0nh5HnXAz\nfWbtmt3PIS92Tqn9cf4kWy96fjAKBggqhkjOPQQDAgNIADBFAiBQpKgzPxZC6h6H\nE9YlYab+6DrW8F8zs4RVRbfd7x7t2AIhALgu+KKwfZ+EFF3fNgMQnAVsj6wLzOQY\n9/AhgkLLQiMW\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://orderer2-ord.orderer.blockchain.kibarocert.com:443"
+      },
+      "orderer-node3.orderer": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQF6kgnmdMQt3bTtvCcFNsRTAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA1MDUwMjI3MzVaFw0zNDA1MDYwMjI3MzVaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErRZKQC0lDRyZ5JjA\nJJrPsPj/L3mLTJppi2zvJA5dElhwkKwUN/LeJ7baUd9ap8cnrbbhFYw18465C7mL\n1pG8OKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBj6cBQu7n0nh5HnXAz\nfWbtmt3PIS92Tqn9cf4kWy96fjAKBggqhkjOPQQDAgNIADBFAiBQpKgzPxZC6h6H\nE9YlYab+6DrW8F8zs4RVRbfd7x7t2AIhALgu+KKwfZ+EFF3fNgMQnAVsj6wLzOQY\n9/AhgkLLQiMW\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://orderer3-ord.orderer.blockchain.kibarocert.com:443"
+      },
+      "orderer-node4.orderer": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQF6kgnmdMQt3bTtvCcFNsRTAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA1MDUwMjI3MzVaFw0zNDA1MDYwMjI3MzVaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErRZKQC0lDRyZ5JjA\nJJrPsPj/L3mLTJppi2zvJA5dElhwkKwUN/LeJ7baUd9ap8cnrbbhFYw18465C7mL\n1pG8OKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBj6cBQu7n0nh5HnXAz\nfWbtmt3PIS92Tqn9cf4kWy96fjAKBggqhkjOPQQDAgNIADBFAiBQpKgzPxZC6h6H\nE9YlYab+6DrW8F8zs4RVRbfd7x7t2AIhALgu+KKwfZ+EFF3fNgMQnAVsj6wLzOQY\n9/AhgkLLQiMW\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://orderer4-ord.orderer.blockchain.kibarocert.com:443"
+      },
+      "orderer-node5.orderer": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQF6kgnmdMQt3bTtvCcFNsRTAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA1MDUwMjI3MzVaFw0zNDA1MDYwMjI3MzVaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAErRZKQC0lDRyZ5JjA\nJJrPsPj/L3mLTJppi2zvJA5dElhwkKwUN/LeJ7baUd9ap8cnrbbhFYw18465C7mL\n1pG8OKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBj6cBQu7n0nh5HnXAz\nfWbtmt3PIS92Tqn9cf4kWy96fjAKBggqhkjOPQQDAgNIADBFAiBQpKgzPxZC6h6H\nE9YlYab+6DrW8F8zs4RVRbfd7x7t2AIhALgu+KKwfZ+EFF3fNgMQnAVsj6wLzOQY\n9/AhgkLLQiMW\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://orderer5-ord.orderer.blockchain.kibarocert.com:443"
+      }
+    },
+    "organizations": {
+      "OrdererMSP": {
+        "cryptoPath": "/tmp/cryptopath",
+        "mspid": "OrdererMSP",
+        "orderers": [
+          "orderer-node1.orderer",
+          "orderer-node2.orderer",
+          "orderer-node3.orderer",
+          "orderer-node4.orderer",
+          "orderer-node5.orderer"
+        ],
+        "peers": [],
+        "users": {}
+      },
+      "inphbMSP": {
+        "cryptoPath": "/tmp/cryptopath",
+        "mspid": "inphbMSP",
+        "orderers": [],
+        "peers": [
+          "inphb-peer1.inphb",
+          "inphb-peer2.inphb"
+        ],
+        "users": {
+          "admin": {
+            "cert": {
+              "pem": "-----BEGIN CERTIFICATE-----\nMIICUzCCAfmgAwIBAgIUNf5vkzJDtj8Q4X/MNBucaCHwe/0wCgYIKoZIzj0EAwIw\najELMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGlj\nYW50ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEL\nMAkGA1UEAxMCY2EwHhcNMjQwNDI3MTI1NDA3WhcNMjUwNTA5MDMyMzAwWjAgMQ4w\nDAYDVQQLEwVhZG1pbjEOMAwGA1UEAxMFYWRtaW4wWTATBgcqhkjOPQIBBggqhkjO\nPQMBBwNCAAR5K9VhFTBj8d3YLB183ifPOj//iTGn9tmPK6VSIQ2LkYIwD0YwG5BJ\nGH8WvaUVVX+qN9VSbIV0hvCY10QRihlSo4HGMIHDMA4GA1UdDwEB/wQEAwIHgDAM\nBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQHya7d5MUI2vMfyLPQkPd7FLLyPTArBgNV\nHSMEJDAigCACauS9yJ4A+YgG3/O8ls75mwE0ibVtmV0YGJf0lQdmETBXBggqAwQF\nBgcIAQRLeyJhdHRycyI6eyJoZi5BZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1l\nbnRJRCI6ImFkbWluIiwiaGYuVHlwZSI6ImFkbWluIn19MAoGCCqGSM49BAMCA0gA\nMEUCIQC5TN3D/Ekj5SDLfngZVv8AVLr5i+6vp/2KkZd6i/J43AIgINe70GPAL1VM\nxLtBo6pbK/2Ts9f5qW58au5+aMawfQo=\n-----END CERTIFICATE-----\n"
+            },
+            "key": {
+              "pem": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgvoinR9zswptPUI+u\ntr5tmWYAmKGKgRaM0b2wYD5RoLehRANCAAR5K9VhFTBj8d3YLB183ifPOj//iTGn\n9tmPK6VSIQ2LkYIwD0YwG5BJGH8WvaUVVX+qN9VSbIV0hvCY10QRihlS\n-----END PRIVATE KEY-----\n"
+            }
+          }
+        }
+      },
+      "kibarocertMSP": {
+        "cryptoPath": "/tmp/cryptopath",
+        "mspid": "kibarocertMSP",
+        "orderers": [],
+        "peers": [
+          "kibarocert-peer1.kibarocert",
+          "kibarocert-peer2.kibarocert",
+          "kibarocert-peer3.kibarocert"
+        ],
+        "users": {
+          "admin": {
+            "cert": {
+              "pem": "-----BEGIN CERTIFICATE-----\nMIICUjCCAfmgAwIBAgIUVKyWtgt3Q9qujnJjj05MXXEJQmEwCgYIKoZIzj0EAwIw\najELMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGlj\nYW50ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEL\nMAkGA1UEAxMCY2EwHhcNMjQwNDI3MTI1MzA5WhcNMjUwNTA5MDMyMzAwWjAgMQ4w\nDAYDVQQLEwVhZG1pbjEOMAwGA1UEAxMFYWRtaW4wWTATBgcqhkjOPQIBBggqhkjO\nPQMBBwNCAAQlA9+EzlUKE6rSWwaNyDuEwVhAke2TTLn8IemaUCTD1Mu3bogPPca1\nmxe0ifuF4Qb7o+v4DqPujpFIeZG4dkFRo4HGMIHDMA4GA1UdDwEB/wQEAwIHgDAM\nBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBQRpu/FbYMwta+Q14LojxHPv2cgYTArBgNV\nHSMEJDAigCDDMFdlyrmyhEQfV5Xug7TLCOQVRxTdryLcyEfUUEkK+zBXBggqAwQF\nBgcIAQRLeyJhdHRycyI6eyJoZi5BZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1l\nbnRJRCI6ImFkbWluIiwiaGYuVHlwZSI6ImFkbWluIn19MAoGCCqGSM49BAMCA0cA\nMEQCIFzc2gZDqDE+2dKsmbtTMUKX21GGZqZeAs9PvDDqJ3uwAiBZd7GkNFONR/gL\n1y9qUfoHykwgTrWawTfvIMrvViD+JQ==\n-----END CERTIFICATE-----\n"
+            },
+            "key": {
+              "pem": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg9FCLrCmP7tv7pIO6\nOrunpadngtBOwwzgX/ZvBnwS6dOhRANCAAQlA9+EzlUKE6rSWwaNyDuEwVhAke2T\nTLn8IemaUCTD1Mu3bogPPca1mxe0ifuF4Qb7o+v4DqPujpFIeZG4dkFR\n-----END PRIVATE KEY-----\n"
+            }
+          }
+        }
+      },
+      "montpellier-bsMSP": {
+        "cryptoPath": "/tmp/cryptopath",
+        "mspid": "montpellier-bsMSP",
+        "orderers": [],
+        "peers": [
+          "montpellier-bs-peer1.montpellier-bs",
+          "montpellier-bs-peer2.montpellier-bs"
+        ],
+        "users": {
+          "admin": {
+            "cert": {
+              "pem": "-----BEGIN CERTIFICATE-----\nMIICUzCCAfmgAwIBAgIUPoaGXawlDa8DU/tlPQGoKi/TweUwCgYIKoZIzj0EAwIw\najELMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGlj\nYW50ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEL\nMAkGA1UEAxMCY2EwHhcNMjQwNDI3MTI1NDM5WhcNMjUwNTA5MDMyNTAwWjAgMQ4w\nDAYDVQQLEwVhZG1pbjEOMAwGA1UEAxMFYWRtaW4wWTATBgcqhkjOPQIBBggqhkjO\nPQMBBwNCAARCxyB51NzZL8zlUnXS1KB9AhPdUZLWe0ZUHl9hKFUwmo5fcsoePW3F\nk6cZaBsMnzo7lpeUt8ttoT3eILNuHdLQo4HGMIHDMA4GA1UdDwEB/wQEAwIHgDAM\nBgNVHRMBAf8EAjAAMB0GA1UdDgQWBBSHG94knSTjzHz+KQjYiInIWG2d5zArBgNV\nHSMEJDAigCCwFZlBEDfNmOw9bGWdRGRJ37qP2s93iTZPEy4qgzCf3DBXBggqAwQF\nBgcIAQRLeyJhdHRycyI6eyJoZi5BZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1l\nbnRJRCI6ImFkbWluIiwiaGYuVHlwZSI6ImFkbWluIn19MAoGCCqGSM49BAMCA0gA\nMEUCIQDvXKugw3m5oKB6XhSkUU/+/FOAL2EnaYfIibLsKWD8qwIgPFMKCAXLSVK8\nN7huO1IU5oaE02xhhrcKTxdE2ivck94=\n-----END CERTIFICATE-----\n"
+            },
+            "key": {
+              "pem": "-----BEGIN PRIVATE KEY-----\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQguQyw8IeXGGqIYJ6p\n5+KqgMyfkVhc4fPuk9C792dt+xOhRANCAARCxyB51NzZL8zlUnXS1KB9AhPdUZLW\ne0ZUHl9hKFUwmo5fcsoePW3Fk6cZaBsMnzo7lpeUt8ttoT3eILNuHdLQ\n-----END PRIVATE KEY-----\n"
+            }
+          }
+        }
+      }
+    },
+    "peers": {
+      "inphb-peer1.inphb": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeygAwIBAgIRAOxvrCO+z4kU/2IWbNjjSXkwCgYIKoZIzj0EAwIwbTEL\nMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGljYW50\nZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEOMAwG\nA1UEAxMFdGxzY2EwHhcNMjQwNDI3MTI1NDA3WhcNMzQwNDI4MTI1NDA3WjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABHUcTTgi/iRvL6jV\nkIBvPXL1E0osoRF8N58Y6TPFu23onKGY7/gCnyl8SuKvdgkdXqCbfzYukmFtiraC\ni/nvNd2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgBPWTIvFHP1sXhJa6\nYgxWUk171e102+srcY3qjdWvRY4wCgYIKoZIzj0EAwIDRwAwRAIgEWgv6H0brT/6\nd5JYWBwIoB6kMu3vAupPbKjnqSQBSzoCIFU+2GooAVIIPbOQKrMUl8stH3aZX2Nz\npwu0ZX1YKvbM\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer1-inphb.inphb.blockchain.kibarocert.com:443"
+      },
+      "inphb-peer2.inphb": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeygAwIBAgIRAOxvrCO+z4kU/2IWbNjjSXkwCgYIKoZIzj0EAwIwbTEL\nMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGljYW50\nZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEOMAwG\nA1UEAxMFdGxzY2EwHhcNMjQwNDI3MTI1NDA3WhcNMzQwNDI4MTI1NDA3WjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABHUcTTgi/iRvL6jV\nkIBvPXL1E0osoRF8N58Y6TPFu23onKGY7/gCnyl8SuKvdgkdXqCbfzYukmFtiraC\ni/nvNd2jbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI\nKwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgBPWTIvFHP1sXhJa6\nYgxWUk171e102+srcY3qjdWvRY4wCgYIKoZIzj0EAwIDRwAwRAIgEWgv6H0brT/6\nd5JYWBwIoB6kMu3vAupPbKjnqSQBSzoCIFU+2GooAVIIPbOQKrMUl8stH3aZX2Nz\npwu0ZX1YKvbM\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer2-inphb.inphb.blockchain.kibarocert.com:443"
+      },
+      "kibarocert-peer1.kibarocert": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQFdAMI43g9gydWHmBfEiVFDAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA0MjcxMjUzMDlaFw0zNDA0MjgxMjUzMDlaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbaWsuMFcF2S5gCwx\ntXY1EgjE7ccs4oTQNVWsPDgnzFiHhC0igciQq1cjdn3TvtJloiYepkDy1zYTojJV\n5a8MDKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCzTjDo/oBzwjLgDNbZ\nxj1gpef3nz4FVscs7Cv2QnOJajAKBggqhkjOPQQDAgNIADBFAiBvstFRBQ8FwlqO\nsMSuanptLyZf7IqhgdmJBlzs9nRAJQIhAMmVolzivr08MV499MBe8vjRBpa8Vd7l\nw1H632pMnO+0\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer1-kibarocert.kibarocert.blockchain.kibarocert.com:443"
+      },
+      "kibarocert-peer2.kibarocert": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQFdAMI43g9gydWHmBfEiVFDAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA0MjcxMjUzMDlaFw0zNDA0MjgxMjUzMDlaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbaWsuMFcF2S5gCwx\ntXY1EgjE7ccs4oTQNVWsPDgnzFiHhC0igciQq1cjdn3TvtJloiYepkDy1zYTojJV\n5a8MDKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCzTjDo/oBzwjLgDNbZ\nxj1gpef3nz4FVscs7Cv2QnOJajAKBggqhkjOPQQDAgNIADBFAiBvstFRBQ8FwlqO\nsMSuanptLyZf7IqhgdmJBlzs9nRAJQIhAMmVolzivr08MV499MBe8vjRBpa8Vd7l\nw1H632pMnO+0\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer2-kibarocert.kibarocert.blockchain.kibarocert.com:443"
+      },
+      "kibarocert-peer3.kibarocert": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQFdAMI43g9gydWHmBfEiVFDAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA0MjcxMjUzMDlaFw0zNDA0MjgxMjUzMDlaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEbaWsuMFcF2S5gCwx\ntXY1EgjE7ccs4oTQNVWsPDgnzFiHhC0igciQq1cjdn3TvtJloiYepkDy1zYTojJV\n5a8MDKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCzTjDo/oBzwjLgDNbZ\nxj1gpef3nz4FVscs7Cv2QnOJajAKBggqhkjOPQQDAgNIADBFAiBvstFRBQ8FwlqO\nsMSuanptLyZf7IqhgdmJBlzs9nRAJQIhAMmVolzivr08MV499MBe8vjRBpa8Vd7l\nw1H632pMnO+0\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer3-kibarocert.kibarocert.blockchain.kibarocert.com:443"
+      },
+      "montpellier-bs-peer1.montpellier-bs": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQc1JGRD3LM8tOkHGWvL4lZzAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA0MjcxMjU0MzlaFw0zNDA0MjgxMjU0MzlaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhNuq97ONKOxEYlPV\nd4qzKiwoZ3uB2gWIhGGFwqxcoERbw7YsRUMwsDfr+IDW1Tn4ahxuoc2AGbYW8xYt\nPPhoYKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBsONd8rMGLIcMq1Cur\nkiyp93ylH5/Rko8GuLlyH/jXyTAKBggqhkjOPQQDAgNIADBFAiEA9c1DZWfAxVPQ\nQUnlv/hnuGJV2UYBvV7SSGmjkQQFbicCIBiMJZ2fEtTzLsQkIWulqdmF7rg9eNpR\n8SKQbpVY04aV\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer1-montpellier-bs.montpellier-bs.blockchain.kibarocert.com:443"
+      },
+      "montpellier-bs-peer2.montpellier-bs": {
+        "grpcOptions": {
+          "allow-insecure": false
+        },
+        "tlsCACerts": {
+          "pem": "-----BEGIN CERTIFICATE-----\nMIICRTCCAeugAwIBAgIQc1JGRD3LM8tOkHGWvL4lZzAKBggqhkjOPQQDAjBtMQsw\nCQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl\nMRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD\nVQQDEwV0bHNjYTAeFw0yNDA0MjcxMjU0MzlaFw0zNDA0MjgxMjU0MzlaMG0xCzAJ\nBgNVBAYTAkVTMREwDwYDVQQHEwhBbGljYW50ZTERMA8GA1UECRMIQWxpY2FudGUx\nGTAXBgNVBAoTEEt1bmcgRnUgU29mdHdhcmUxDTALBgNVBAsTBFRlY2gxDjAMBgNV\nBAMTBXRsc2NhMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEhNuq97ONKOxEYlPV\nd4qzKiwoZ3uB2gWIhGGFwqxcoERbw7YsRUMwsDfr+IDW1Tn4ahxuoc2AGbYW8xYt\nPPhoYKNtMGswDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggr\nBgEFBQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCBsONd8rMGLIcMq1Cur\nkiyp93ylH5/Rko8GuLlyH/jXyTAKBggqhkjOPQQDAgNIADBFAiEA9c1DZWfAxVPQ\nQUnlv/hnuGJV2UYBvV7SSGmjkQQFbicCIBiMJZ2fEtTzLsQkIWulqdmF7rg9eNpR\n8SKQbpVY04aV\n-----END CERTIFICATE-----\n"
+        },
+        "url": "grpcs://peer2-montpellier-bs.montpellier-bs.blockchain.kibarocert.com:443"
+      }
+    },
+    "version": "1.0.0"
+  }

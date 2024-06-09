@@ -1,0 +1,21 @@
+{
+    "eventWaitTime": 600000,
+    "loglevel": "INFO",
+    "adminList": [
+        {
+            "org": "kibarocertMSP",
+            "username": "enroll",
+            "password": "enrollpw"
+        },
+        {
+            "org": "inphbMSP",
+            "username": "enroll",
+            "password": "enrollpw"
+        },
+        {
+            "org": "montpellier-bsMSP",
+            "username": "enroll",
+            "password": "enrollpw"
+        }
+    ]
+}
