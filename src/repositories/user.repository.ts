@@ -8,7 +8,6 @@ import { UserCredentials } from '../models/user-credentials.model';
 export type Credentials = {
     email: string;
     password: string;
-    organization: string;
   };
 
 export class MyUserRepository extends DefaultCrudRepository<

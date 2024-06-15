@@ -23,7 +23,6 @@ import {getRegisteredUser} from '../helper';
 export type Credentials = {
   username: string;
   password: string;
-  organization: string;
 };
 
 export class MyUserService implements UserService<User, Credentials> {
@@ -58,7 +57,7 @@ export class MyUserService implements UserService<User, Credentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    let user = await getRegisteredUser(credentials.username, credentials.organization);
+    let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
 
     if (user == null) {
       throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
