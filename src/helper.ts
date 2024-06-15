@@ -74,7 +74,6 @@ const registerAndEnrollUser = async (
     const {adminUserId} = await getAdminCreds(userOrg);
 
     const caClient = await getCAClientByOrg(userOrg);
-    console.log(caClient);
     // Check to see if we've already enrolled the user
     const wallet = await createWallet(userOrg);
 
