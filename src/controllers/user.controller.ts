@@ -25,52 +25,49 @@ import _ from 'lodash';
 import {AfterCreateInterceptor} from '../interceptors';
 import { enrollAdmin } from '../helper';
 
+
 @model()
-export class CreateUser extends User {
-  @property({
-    type: 'string',
-    required: true,
-  })
-  password: string;
-}
+    export class CreateUser extends User {
+      @property({
+        type: 'string',
+        required: true,
+      })
+      password: string;
+    }
 
-const UserSchema: SchemaObject = {
-  type: 'object',
-  required: ['username', 'password', 'organization'],
-  properties: {
-    username: {
-      type: 'string',
-      minLength: 2,
-    },
-    password: {
-      type: 'string',
-      minLength: 6,
-    },
-    organization: {
-      type: 'string',
-      minLength: 4,
-    },
-  },
-};
+    const UserSchema: SchemaObject = {
+      type: 'object',
+      required: ['email', 'password'],
+      properties: {
+        email: {
+          type: 'string',
+          format: 'email',
+        },
+        password: {
+          type: 'string',
+          minLength: 6,
+        },
+      },
+    };
 
-export const RequestBody = {
-  description: 'The input of login function',
-  required: true,
-  content: {
-    'application/json': {schema: UserSchema},
-  },
-};
+    export const RequestBody = {
+      description: 'The input of login function',
+      required: true,
+      content: {
+        'application/json': { schema: UserSchema },
+      },
+    };
 
-export class UserController {
-  constructor(
-    @inject(TokenServiceBindings.TOKEN_SERVICE)
-    public jwtService: TokenService,
-    @inject(UserServiceBindings.USER_SERVICE)
-    public userService: MyUserService,
-    @inject(SecurityBindings.USER, {optional: true})
-    public user: UserProfile,
-    @repository(UserRepository) protected userRepository: UserRepository,
-  ) { }
+    export class UserController {
+      constructor(
+        @inject(TokenServiceBindings.TOKEN_SERVICE)
+        public jwtService: TokenService,
+        @inject(UserServiceBindings.USER_SERVICE)
+        public userService: MyUserService,
+        @inject(SecurityBindings.USER, { optional: true })
+        public user: UserProfile,
+        @repository(UserRepository) protected userRepository: UserRepository,
+      ) { }
   @intercept(AfterCreateInterceptor.BINDING_KEY)
   @post('/signup', {
     responses: {
@@ -103,7 +100,7 @@ export class UserController {
       _.omit(newUserRequest, 'password'),
     );
 
-    await this.userRepository.userCredentials(savedUser.id).create({password});
+    // await this.userRepository.userCredentials(savedUser.id).create({password});
     return savedUser;
   }
 
@@ -128,11 +125,11 @@ export class UserController {
   })
   async signIn(
     @requestBody(RequestBody) credentials: Credentials,
-  ): Promise<{token: string, user: object}> {
+  ): Promise<{token: string}> {
     const user = await this.userService.verifyCredentials(credentials);
-    const userProfile = this.userService.convertToUserProfile(user);
-    const token = await this.jwtService.generateToken(userProfile);
-    return {token, user};
+      const userProfile = this.userService.convertToUserProfile(user);
+      const token = await this.jwtService.generateToken(userProfile);
+    return {token};
   }
 
   @post('/hlf-enrollAdmin')
@@ -183,4 +180,26 @@ export class UserController {
     const result = enrollAdmin(id);
     return result
   }
+
+  // @authenticate('jwt')
+  // @get('/whoami', {
+  //   responses: {
+  //     '200': {
+  //       description: 'Return current user',
+  //       content: {
+  //         'application/json': {
+  //           schema: {
+  //             type: 'string',
+  //           },
+  //         },
+  //       },
+  //     },
+  //   },
+  // })
+  // async whoAmI(
+  //   @inject(SecurityBindings.USER)
+  //   loggedInUserProfile: UserProfile,
+  // ): Promise<string> {
+  //   return loggedInUserProfile[securityId];
+  // }
 }
