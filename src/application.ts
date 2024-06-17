@@ -1,7 +1,7 @@
 import { AuthenticationComponent } from "@loopback/authentication";
 import {
   JWTAuthenticationComponent,
-  MyUserService,
+  // MyUserService,
   UserServiceBindings,
 } from "@loopback/authentication-jwt";
 import { BootMixin } from '@loopback/boot';
@@ -16,7 +16,7 @@ import { ServiceMixin } from '@loopback/service-proxy';
 import path from 'path';
 import { KibaroMongoDataSource } from './datasources';
 import { MySequence } from './sequence';
-// import { MyUserService } from './services/user.service';
+import { MyUserService } from './services/user.service';
 
 export { ApplicationConfig };
 
@@ -44,7 +44,7 @@ export class KibaroApplication extends BootMixin(
     // Bind user service
     this.bind(UserServiceBindings.USER_SERVICE).toClass(MyUserService),
 
-      this.projectRoot = __dirname;
+    this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here
     this.bootOptions = {
       controllers: {

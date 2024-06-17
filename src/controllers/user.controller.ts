@@ -2,7 +2,7 @@
 import {TokenService, authenticate} from '@loopback/authentication';
 import {
   Credentials,
-  MyUserService,
+  // MyUserService,
   TokenServiceBindings,
   User,
   UserRepository,
@@ -10,6 +10,7 @@ import {
 } from '@loopback/authentication-jwt';
 import {inject, intercept} from '@loopback/core';
 import {model, property, repository} from '@loopback/repository';
+import {securityId} from '@loopback/security';
 import {
   SchemaObject,
   get,
@@ -24,6 +25,7 @@ import {genSalt, hash} from 'bcryptjs';
 import _ from 'lodash';
 import {AfterCreateInterceptor} from '../interceptors';
 import { enrollAdmin } from '../helper';
+import { MyUserService } from '../services/user.service';
 
 
 @model()
@@ -37,11 +39,11 @@ import { enrollAdmin } from '../helper';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['email', 'password'],
+      required: ['username', 'password'],
       properties: {
-        email: {
+        username: {
           type: 'string',
-          format: 'email',
+          // format: 'email',
         },
         password: {
           type: 'string',
@@ -100,7 +102,7 @@ import { enrollAdmin } from '../helper';
       _.omit(newUserRequest, 'password'),
     );
 
-    // await this.userRepository.userCredentials(savedUser.id).create({password});
+    await this.userRepository.userCredentials(savedUser.id).create({password});
     return savedUser;
   }
 
@@ -125,11 +127,11 @@ import { enrollAdmin } from '../helper';
   })
   async signIn(
     @requestBody(RequestBody) credentials: Credentials,
-  ): Promise<{token: string}> {
-    const user = await this.userService.verifyCredentials(credentials);
-      const userProfile = this.userService.convertToUserProfile(user);
-      const token = await this.jwtService.generateToken(userProfile);
-    return {token};
+  ): Promise<{token: string, user: User}> {
+    const user = await this.userService.MyverifyCredentials(credentials);
+    const userProfile = this.userService.convertToUserProfile(user);
+    const token = await this.jwtService.generateToken(userProfile);
+    return {token, user};
   }
 
   @post('/hlf-enrollAdmin')
@@ -181,25 +183,25 @@ import { enrollAdmin } from '../helper';
     return result
   }
 
-  // @authenticate('jwt')
-  // @get('/whoami', {
-  //   responses: {
-  //     '200': {
-  //       description: 'Return current user',
-  //       content: {
-  //         'application/json': {
-  //           schema: {
-  //             type: 'string',
-  //           },
-  //         },
-  //       },
-  //     },
-  //   },
-  // })
-  // async whoAmI(
-  //   @inject(SecurityBindings.USER)
-  //   loggedInUserProfile: UserProfile,
-  // ): Promise<string> {
-  //   return loggedInUserProfile[securityId];
-  // }
+  @authenticate('jwt')
+  @get('/whoami', {
+    responses: {
+      '200': {
+        description: 'Return current user',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'string',
+            },
+          },
+        },
+      },
+    },
+  })
+  async whoAmI(
+    @inject(SecurityBindings.USER)
+    loggedInUserProfile: UserProfile,
+  ): Promise<string> {
+    return loggedInUserProfile[securityId];
+  }
 }

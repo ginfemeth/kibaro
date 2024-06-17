@@ -15,7 +15,6 @@ import {securityId, UserProfile} from '@loopback/security';
 import {compare} from 'bcryptjs';
 import {getRegisteredUser} from '../helper';
 
-
 /**
  * A pre-defined type for user credentials. It assumes a user logs in
  * using the username and password. You can modify it if your app has different credential fields
@@ -31,6 +30,41 @@ export class MyUserService implements UserService<User, Credentials> {
   ) { }
 
   async verifyCredentials(credentials: Credentials): Promise<User> {
+    const invalidCredentialsError = 'Invalid username or password.';
+    const unregisteredError = 'Vous n\'avez pas encore de compte.';
+
+    const foundUser = await this.userRepository.findOne({
+      where: {username: credentials.username},
+    });
+    if (!foundUser) {
+      throw new HttpErrors.Unauthorized(invalidCredentialsError);
+    }
+
+    const credentialsFound = await this.userRepository.findCredentials(
+      foundUser.id,
+    );
+    if (!credentialsFound) {
+      throw new HttpErrors.Unauthorized(invalidCredentialsError);
+    }
+
+    const passwordMatched = await compare(
+      credentials.password,
+      credentialsFound.password,
+    );
+
+    if (!passwordMatched) {
+      throw new HttpErrors.Unauthorized(invalidCredentialsError);
+    }
+
+    let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
+
+    if (user == null) {
+      throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
+    }
+
+    return foundUser;
+  }
+  async MyverifyCredentials(credentials: Credentials): Promise<User> {
     const invalidCredentialsError = 'Invalid username or password.';
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
