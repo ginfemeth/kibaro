@@ -20,7 +20,7 @@ import {getRegisteredUser} from '../helper';
  * using the username and password. You can modify it if your app has different credential fields
  */
 export type Credentials = {
-  username: string;
+  email: string;
   password: string;
 };
 
@@ -34,7 +34,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: {username: credentials.username},
+      where: {email: credentials.email},
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
@@ -56,7 +56,7 @@ export class MyUserService implements UserService<User, Credentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
+    let user = await getRegisteredUser(credentials.email, "kibarocertMSP");
 
     if (user == null) {
       throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
@@ -69,7 +69,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: {username: credentials.username},
+      where: {username: credentials.email},
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
@@ -91,7 +91,7 @@ export class MyUserService implements UserService<User, Credentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
+    let user = await getRegisteredUser(credentials.email, "kibarocertMSP");
 
     if (user == null) {
       throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
