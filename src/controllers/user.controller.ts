@@ -39,15 +39,19 @@ import { MyUserService } from '../services/user.service';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['email', 'password'],
+      required: ['username', 'password', 'organization'],
       properties: {
-        email: {
+        username: {
           type: 'string',
-          format: 'email',
+          // format: 'username',
         },
         password: {
           type: 'string',
           minLength: 6,
+        },
+        organization: {
+          type: 'string',
+          minLength: 4,
         },
       },
     };
