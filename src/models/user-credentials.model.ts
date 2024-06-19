@@ -24,7 +24,7 @@ export class UserCredentials extends Entity {
     type: 'string',
     required: false,
   })
-  email: string;
+  username: string;
 
   // @property({
   //   type: 'string',

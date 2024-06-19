@@ -42,11 +42,6 @@ export class User extends Entity {
     @property({
         type: 'string',
     })
-    organization?: string;
-
-    @property({
-        type: 'string',
-    })
     firstName?: string;
 
     @property({

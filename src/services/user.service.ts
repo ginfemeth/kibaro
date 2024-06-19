@@ -21,7 +21,7 @@ import { UserRepository } from '../repositories/user.repository';
  * using the username and password. You can modify it if your app has different credential fields
  */
 export type Credentials = {
-  email: string;
+  username: string;
   password: string;
   // organization: string;
 };
@@ -37,7 +37,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: { email: credentials.email },
+      where: { username: credentials.username },
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);

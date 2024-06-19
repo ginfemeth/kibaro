@@ -41,11 +41,11 @@ import { UserRepository } from '../repositories/user.repository';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['email', 'password'],
+      required: ['username', 'password'],
       properties: {
-        email: {
+        username: {
           type: 'string',
-          format: 'email',
+          // format: 'email',
         },
         password: {
           type: 'string',

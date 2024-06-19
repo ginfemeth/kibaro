@@ -17,7 +17,7 @@ import { UserCredentials } from '../models';
 import { UserServiceBindings } from '../keys';
 
 export type Credentials = {
-  email: string;
+  username: string;
   password: string;
   // organization: string;
 };
