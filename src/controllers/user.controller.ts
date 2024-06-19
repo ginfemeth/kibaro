@@ -41,20 +41,20 @@ import { UserRepository } from '../repositories/user.repository';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['username', 'password', 'organization'],
+      required: ['email', 'password'],
       properties: {
-        username: {
+        email: {
           type: 'string',
-          // format: 'username',
+          format: 'email',
         },
         password: {
           type: 'string',
           minLength: 6,
         },
-        organization: {
-          type: 'string',
-          minLength: 4,
-        },
+        // organization: {
+        //   type: 'string',
+        //   minLength: 4,
+        // },
       },
     };
 
@@ -134,7 +134,7 @@ import { UserRepository } from '../repositories/user.repository';
   async signIn(
     @requestBody(RequestBody) credentials: UserCredentials,
   ): Promise<{token: string, user: User}> {
-    const user = await this.userService.MyverifyCredentials(credentials);
+    const user = await this.userService.verifyCredentials(credentials);
     const userProfile = this.userService.convertToUserProfile(user);
     const token = await this.jwtService.generateToken(userProfile);
     return {token, user};

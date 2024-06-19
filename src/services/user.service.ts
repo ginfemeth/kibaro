@@ -21,9 +21,9 @@ import { UserRepository } from '../repositories/user.repository';
  * using the username and password. You can modify it if your app has different credential fields
  */
 export type Credentials = {
-  username: string;
+  email: string;
   password: string;
-  organization: string;
+  // organization: string;
 };
 
 
@@ -37,7 +37,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: { username: credentials.username },
+      where: { email: credentials.email },
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
@@ -59,11 +59,11 @@ export class MyUserService implements UserService<User, Credentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
+    // let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
 
-    if (user == null) {
-      throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
-    }
+    // if (user == null) {
+    //   throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
+    // }
     // const currentUser = {
     //   username: foundUser.username,
     //   password: credentialsFound.password,
@@ -73,41 +73,41 @@ export class MyUserService implements UserService<User, Credentials> {
 
     return foundUser;
   }
-  async MyverifyCredentials(credentials: Credentials): Promise<User> {
-    const invalidCredentialsError = 'Invalid username or password.';
-    const unregisteredError = 'Vous n\'avez pas encore de compte.';
+  // async MyverifyCredentials(credentials: Credentials): Promise<User> {
+  //   const invalidCredentialsError = 'Invalid username or password.';
+  //   const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
-    const foundUser = await this.userRepository.findOne({
-      where: { username: credentials.username },
-    });
-    if (!foundUser) {
-      throw new HttpErrors.Unauthorized(invalidCredentialsError);
-    }
+  //   const foundUser = await this.userRepository.findOne({
+  //     where: { username: credentials.username },
+  //   });
+  //   if (!foundUser) {
+  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
+  //   }
 
-    const credentialsFound = await this.userRepository.findCredentials(
-      foundUser.id,
-    );
-    if (!credentialsFound) {
-      throw new HttpErrors.Unauthorized(invalidCredentialsError);
-    }
+  //   const credentialsFound = await this.userRepository.findCredentials(
+  //     foundUser.id,
+  //   );
+  //   if (!credentialsFound) {
+  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
+  //   }
 
-    const passwordMatched = await compare(
-      credentials.password,
-      credentialsFound.password,
-    );
+  //   const passwordMatched = await compare(
+  //     credentials.password,
+  //     credentialsFound.password,
+  //   );
 
-    if (!passwordMatched) {
-      throw new HttpErrors.Unauthorized(invalidCredentialsError);
-    }
+  //   if (!passwordMatched) {
+  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
+  //   }
 
-    let user = await getRegisteredUser(credentials.username, credentials.organization);
+  //   // let user = await getRegisteredUser(credentials.username, credentials.organization);
 
-    if (user == null) {
-      throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
-    }
+  //   // if (user == null) {
+  //   //   throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
+  //   // }
 
-    return foundUser;
-  }
+  //   return foundUser;
+  // }
 
   convertToUserProfile(user: User): UserProfile {
     return {

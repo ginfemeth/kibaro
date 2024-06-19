@@ -24,13 +24,13 @@ export class UserCredentials extends Entity {
     type: 'string',
     required: false,
   })
-  username: string;
+  email: string;
 
-  @property({
-    type: 'string',
-    required: false,
-  })
-  organization: string;
+  // @property({
+  //   type: 'string',
+  //   required: false,
+  // })
+  // organization: string;
 
   @property({
     type: 'string',

@@ -17,9 +17,9 @@ import { UserCredentials } from '../models';
 import { UserServiceBindings } from '../keys';
 
 export type Credentials = {
-  username: string;
+  email: string;
   password: string;
-  organization: string;
+  // organization: string;
 };
 
 export class UserRepository extends DefaultCrudRepository<
