@@ -1,11 +1,11 @@
 // Uncomment these imports to begin using these cool features!
 import {TokenService, authenticate} from '@loopback/authentication';
 import {
-  Credentials,
+  // Credentials,
   // MyUserService,
   TokenServiceBindings,
-  User,
-  UserRepository,
+  // User,
+  // UserRepository,
   UserServiceBindings
 } from '@loopback/authentication-jwt';
 import {inject, intercept} from '@loopback/core';
@@ -26,7 +26,9 @@ import _ from 'lodash';
 import {AfterCreateInterceptor} from '../interceptors';
 import { enrollAdmin } from '../helper';
 import { MyUserService } from '../services/user.service';
-
+import { User } from '../models/user.model';
+import { UserCredentials } from '../models/user-credentials.model';
+import { UserRepository } from '../repositories/user.repository';
 
 @model()
     export class CreateUser extends User {
@@ -100,7 +102,7 @@ import { MyUserService } from '../services/user.service';
       },
     })
     newUserRequest: CreateUser,
-  ): Promise<User> {
+  ): Promise<any> {
     const password = await hash(newUserRequest.password, await genSalt());
     const savedUser = await this.userRepository.create(
       _.omit(newUserRequest, 'password'),
@@ -130,7 +132,7 @@ import { MyUserService } from '../services/user.service';
     },
   })
   async signIn(
-    @requestBody(RequestBody) credentials: Credentials,
+    @requestBody(RequestBody) credentials: UserCredentials,
   ): Promise<{token: string, user: User}> {
     const user = await this.userService.MyverifyCredentials(credentials);
     const userProfile = this.userService.convertToUserProfile(user);

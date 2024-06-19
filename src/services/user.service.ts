@@ -3,18 +3,19 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {UserService} from '@loopback/authentication';
-import {
-  User,
-  UserRepository,
-  UserWithRelations,
-} from '@loopback/authentication-jwt';
-import {repository} from '@loopback/repository';
-import {HttpErrors} from '@loopback/rest';
-import {securityId, UserProfile} from '@loopback/security';
-import {compare} from 'bcryptjs';
-import {getRegisteredUser} from '../helper';
+import { UserService } from '@loopback/authentication';
+import { UserRelations } from '@loopback/authentication-jwt';
+import { repository } from '@loopback/repository';
+import { HttpErrors } from '@loopback/rest';
+import { securityId, UserProfile } from '@loopback/security';
+import { compare } from 'bcryptjs';
+import { getRegisteredUser } from '../helper';
+import { User } from '../models/user.model';
+// import {Credentials, UserRepository} from '../repositories';
 
+// import {CustomCredentials, User, UserWithRelations} from '../models';
+import { UserRepository } from '../repositories/user.repository';
+// import { UserCredentials } from '../models/user-credentials.model';
 /**
  * A pre-defined type for user credentials. It assumes a user logs in
  * using the username and password. You can modify it if your app has different credential fields
@@ -24,6 +25,7 @@ export type Credentials = {
   password: string;
   organization: string;
 };
+
 
 export class MyUserService implements UserService<User, Credentials> {
   constructor(
@@ -35,7 +37,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: {username: credentials.username},
+      where: { username: credentials.username },
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
@@ -62,6 +64,12 @@ export class MyUserService implements UserService<User, Credentials> {
     if (user == null) {
       throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
     }
+    // const currentUser = {
+    //   username: foundUser.username,
+    //   password: credentialsFound.password,
+    //   organization: credentials.organization
+
+    // }
 
     return foundUser;
   }
@@ -70,7 +78,7 @@ export class MyUserService implements UserService<User, Credentials> {
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
     const foundUser = await this.userRepository.findOne({
-      where: {username: credentials.username},
+      where: { username: credentials.username },
     });
     if (!foundUser) {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
@@ -111,10 +119,10 @@ export class MyUserService implements UserService<User, Credentials> {
   }
 
   //function to find user by id
-  async findUserById(id: string): Promise<User & UserWithRelations> {
+  async findUserById(id: string): Promise<User & UserRelations> {
     const userNotfound = 'invalid User';
     const foundUser = await this.userRepository.findOne({
-      where: {id: id},
+      where: { id: id },
     });
 
     if (!foundUser) {

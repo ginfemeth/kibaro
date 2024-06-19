@@ -2,7 +2,7 @@ import { AuthenticationComponent } from "@loopback/authentication";
 import {
   JWTAuthenticationComponent,
   // MyUserService,
-  UserServiceBindings,
+  // UserServiceBindings,
 } from "@loopback/authentication-jwt";
 import { BootMixin } from '@loopback/boot';
 import { ApplicationConfig } from '@loopback/core';
@@ -17,6 +17,8 @@ import path from 'path';
 import { KibaroMongoDataSource } from './datasources';
 import { MySequence } from './sequence';
 import { MyUserService } from './services/user.service';
+import { UserServiceBindings } from "./keys";
+// import { UserServiceBindings } from "./keys";
 
 export { ApplicationConfig };
 
@@ -31,7 +33,8 @@ export class KibaroApplication extends BootMixin(
 
     this.component(AuthenticationComponent)
     this.component(JWTAuthenticationComponent)
-    this.dataSource(KibaroMongoDataSource, UserServiceBindings.DATASOURCE_NAME)
+    // this.dataSource(KibaroMongoDataSource, 'kibaro_mongo')
+    this.dataSource(KibaroMongoDataSource, UserServiceBindings.DATASOURCE_NAME);
 
     // Set up default home page
     this.static('/', path.join(__dirname, '../public'));
