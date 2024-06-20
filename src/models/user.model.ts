@@ -58,7 +58,7 @@ export class User extends Entity {
   @property({
     type: 'string',
   })
-  organization?: string; // Example field for OTP
+  organization: string; // Example field for OTP
 
   @hasOne(() => UserCredentials)
   userCredentials: UserCredentials;

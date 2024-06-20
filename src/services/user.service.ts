@@ -10,22 +10,14 @@ import { HttpErrors } from '@loopback/rest';
 import { securityId, UserProfile } from '@loopback/security';
 import { compare } from 'bcryptjs';
 import { getRegisteredUser } from '../helper';
-// import { User } from '../models/user.model';
-// import {Credentials, UserRepository} from '../repositories';
-import { User, UserCredentials, CustomCredentials } from '../models';
+import { User, CustomCredentials } from '../models';
 
-// import {CustomCredentials, User, UserWithRelations} from '../models';
 import { UserRepository } from '../repositories/user.repository';
-// import { UserCredentials } from '../models/user-credentials.model';
+
 /**
  * A pre-defined type for user credentials. It assumes a user logs in
  * using the username and password. You can modify it if your app has different credential fields
  */
-export type Credentials = {
-  // email: string;
-  password: string;
-};
-
 
 export class MyUserService implements UserService<User, CustomCredentials> {
   constructor(
@@ -59,17 +51,17 @@ export class MyUserService implements UserService<User, CustomCredentials> {
       throw new HttpErrors.Unauthorized(invalidCredentialsError);
     }
 
-    // let user = await getRegisteredUser(credentials.username, "kibarocertMSP");
+    let user = await getRegisteredUser(credentials.username, credentials.organization);
 
-    // if (user == null) {
-    //   throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
-    // }
-    // const currentUser = {
-    //   username: foundUser.username,
-    //   password: credentialsFound.password,
-    //   organization: credentials.organization
+    if (user == null) {
+      throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
+    }
+    const currentUser = {
+      username: foundUser.username,
+      password: credentialsFound.password,
+      organization: credentials.organization
 
-    // }
+    }
 
     return foundUser;
   }

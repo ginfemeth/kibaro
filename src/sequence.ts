@@ -2,6 +2,7 @@ import {inject} from '@loopback/context';
 import {
   FindRoute,
   InvokeMethod,
+  InvokeMiddleware,
   ParseParams,
   Reject,
   RequestContext,
@@ -14,6 +15,8 @@ import {AuthenticationBindings, AuthenticateFn} from '@loopback/authentication';
 const SequenceActions = RestBindings.SequenceActions;
 
 export class MySequence implements SequenceHandler {
+  @inject(SequenceActions.INVOKE_MIDDLEWARE, {optional: true})
+  protected invokeMiddleware: InvokeMiddleware = () => false;
   constructor(
     @inject(SequenceActions.FIND_ROUTE) protected findRoute: FindRoute,
     @inject(SequenceActions.PARSE_PARAMS) protected parseParams: ParseParams,
@@ -24,9 +27,12 @@ export class MySequence implements SequenceHandler {
     protected authenticateRequest: AuthenticateFn,
   ) {}
 
+  I //src/sequence.ts generated from old version of CLI, you need to update it
   async handle(context: RequestContext) {
     try {
       const {request, response} = context;
+      const finished = await this.invokeMiddleware(context);
+      if (finished) return;
       const route = this.findRoute(request);
       await this.authenticateRequest(request);
       const args = await this.parseParams(request, route);

@@ -1,11 +1,7 @@
 // Uncomment these imports to begin using these cool features!
 import {TokenService, authenticate} from '@loopback/authentication';
 import {
-  // Credentials,
-  // MyUserService,
   TokenServiceBindings,
-  // User,
-  // UserRepository,
   UserServiceBindings
 } from '@loopback/authentication-jwt';
 import {inject, intercept} from '@loopback/core';
@@ -27,7 +23,6 @@ import {AfterCreateInterceptor} from '../interceptors';
 import { enrollAdmin } from '../helper';
 import { MyUserService } from '../services/user.service';
 import { User } from '../models/user.model';
-import { UserCredentials } from '../models/user-credentials.model';
 import { UserRepository } from '../repositories/user.repository';
 import { CustomCredentials } from '../models';
 
@@ -75,8 +70,6 @@ import { CustomCredentials } from '../models';
         public userService: MyUserService,
         @inject(SecurityBindings.USER, { optional: true })
         public user: UserProfile,
-        // @inject(UserServiceBindings.USER_SERVICE)
-        // public userService: MyUserService<User, CustomCredentials>,
         @repository(UserRepository) protected userRepository: UserRepository,
       ) { }
   @intercept(AfterCreateInterceptor.BINDING_KEY)

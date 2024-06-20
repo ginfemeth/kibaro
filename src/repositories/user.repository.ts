@@ -6,7 +6,6 @@
 import {Getter, inject} from '@loopback/core';
 import {
   DefaultCrudRepository,
-  HasManyRepositoryFactory,
   HasOneRepositoryFactory,
   juggler,
   repository,
@@ -15,7 +14,7 @@ import {UserCredentialsRepository} from './user-credentials.repository';
 import { User } from '../models/user.model';
 import { UserCredentials, CustomCredentials } from '../models';
 import { UserServiceBindings } from '../keys';
-// import {CustomCredentials} from '../models/credentials.model'; // Adjust the import path
+
 export type Credentials = {
   username: string;
   password: string;
