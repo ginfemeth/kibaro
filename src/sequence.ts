@@ -27,7 +27,7 @@ export class MySequence implements SequenceHandler {
     protected authenticateRequest: AuthenticateFn,
   ) {}
 
-  I //src/sequence.ts generated from old version of CLI, you need to update it
+  
   async handle(context: RequestContext) {
     try {
       const {request, response} = context;
