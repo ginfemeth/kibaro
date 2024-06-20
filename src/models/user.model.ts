@@ -55,6 +55,11 @@ export class User extends Entity {
   })
   verificationToken?: string;
 
+  @property({
+    type: 'string',
+  })
+  organization?: string; // Example field for OTP
+
   @hasOne(() => UserCredentials)
   userCredentials: UserCredentials;
 

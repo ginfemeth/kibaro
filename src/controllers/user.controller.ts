@@ -42,7 +42,7 @@ import { CustomCredentials } from '../models';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['username', 'password', 'organization'],
+      required: ['username', 'password'],
       properties: {
         username: {
           type: 'string',
@@ -75,6 +75,8 @@ import { CustomCredentials } from '../models';
         public userService: MyUserService,
         @inject(SecurityBindings.USER, { optional: true })
         public user: UserProfile,
+        // @inject(UserServiceBindings.USER_SERVICE)
+        // public userService: MyUserService<User, CustomCredentials>,
         @repository(UserRepository) protected userRepository: UserRepository,
       ) { }
   @intercept(AfterCreateInterceptor.BINDING_KEY)
