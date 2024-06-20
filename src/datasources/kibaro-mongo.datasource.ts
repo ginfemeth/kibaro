@@ -4,8 +4,7 @@ import {juggler} from '@loopback/repository';
 const config = {
   name: 'kibaro_mongo',
   connector: 'mongodb',
-  // url: 'mongodb+srv://amadouadmin:cY6i3uC8daJCahR5@cluster0.pw23q6v.mongodb.net/Kibarocert2?retryWrites=true&w=majority&appName=Cluster0',
-  url: 'mongodb+srv://ginfometh:rootOpen2024@cluster0.bkasolc.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0',
+  url: 'mongodb+srv://amadouadmin:cY6i3uC8daJCahR5@cluster0.pw23q6v.mongodb.net/Kibarocert2?retryWrites=true&w=majority&appName=Cluster0',
   host: '',
   port: 0,
   user: '',
@@ -13,6 +12,7 @@ const config = {
   database: '',
   useNewUrlParser: true
 };
+//url: 'mongodb+srv://ginfometh:rootOpen2024@cluster0.bkasolc.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0',
 // mongodb+srv://amadouadmin:cY6i3uC8daJCahR5@kibarocertinstance0.qdhmgmi.mongodb.net/?retryWrites=true&w=majority&appName=KibaroCertInstance0
 
 // Observe application's life cycle to disconnect the datasource when
