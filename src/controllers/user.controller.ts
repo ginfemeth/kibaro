@@ -29,6 +29,7 @@ import { MyUserService } from '../services/user.service';
 import { User } from '../models/user.model';
 import { UserCredentials } from '../models/user-credentials.model';
 import { UserRepository } from '../repositories/user.repository';
+import { CustomCredentials } from '../models';
 
 @model()
     export class CreateUser extends User {
@@ -41,7 +42,7 @@ import { UserRepository } from '../repositories/user.repository';
 
     const UserSchema: SchemaObject = {
       type: 'object',
-      required: ['username', 'password'],
+      required: ['username', 'password', 'organization'],
       properties: {
         username: {
           type: 'string',
@@ -51,10 +52,10 @@ import { UserRepository } from '../repositories/user.repository';
           type: 'string',
           minLength: 6,
         },
-        // organization: {
-        //   type: 'string',
-        //   minLength: 4,
-        // },
+        organization: {
+          type: 'string',
+          minLength: 4,
+        },
       },
     };
 
@@ -132,7 +133,7 @@ import { UserRepository } from '../repositories/user.repository';
     },
   })
   async signIn(
-    @requestBody(RequestBody) credentials: UserCredentials,
+    @requestBody(RequestBody) credentials: CustomCredentials,
   ): Promise<{token: string, user: User}> {
     const user = await this.userService.verifyCredentials(credentials);
     const userProfile = this.userService.convertToUserProfile(user);

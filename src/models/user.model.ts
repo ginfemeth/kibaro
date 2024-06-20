@@ -1,70 +1,76 @@
-// Copyright IBM Corp. 2019,2020. All Rights Reserved.
-// Node module: loopback4-example-shopping
+// Copyright IBM Corp. and LoopBack contributors 2020. All Rights Reserved.
+// Node module: @loopback/authentication-jwt
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import { Entity, model, property, hasMany, hasOne } from '@loopback/repository';
-import { UserCredentials } from './user-credentials.model';
+import {Entity, hasOne, model, property} from '@loopback/repository';
+import {UserCredentials} from './user-credentials.model';
 
 @model({
-    settings: {
-        indexes: {
-            uniqueEmail: {
-                keys: {
-                    email: 1,
-                },
-                options: {
-                    unique: true,
-                },
-            },
-        },
-    },
+  settings: {
+    strict: false,
+  },
 })
 export class User extends Entity {
-    @property({
-        type: 'string',
-        id: true,
-    })
-    id: string;
+  // must keep it
+  // add id:string<UUID>
+  @property({
+    type: 'string',
+    id: true,
+    generated: false,
+    defaultFn: 'uuidv4',
+  })
+  id: string;
 
-    @property({
-        type: 'string',
-        required: true,
-    })
-    email: string;
+  @property({
+    type: 'string',
+  })
+  realm?: string;
 
-    // must keep it
-    @property({
-        type: 'string',
-    })
-    username?: string;
+  // must keep it
+  @property({
+    type: 'string',
+    required: true,
+  })
+  username: string;
 
-    @property({
-        type: 'string',
-    })
-    firstName?: string;
+  // must keep it
+  // feat email unique
+  @property({
+    type: 'string',
+    required: true,
+    index: {
+      unique: true,
+    },
+  })
+  email: string;
 
-    @property({
-        type: 'string',
-    })
-    lastName?: string;
+  @property({
+    type: 'boolean',
+  })
+  emailVerified?: boolean;
 
-    @hasOne(() => UserCredentials)
-    userCredentials: UserCredentials;
+  @property({
+    type: 'string',
+  })
+  verificationToken?: string;
 
-    @property({
-        type: 'array',
-        itemType: 'string',
-    })
-    roles?: string[];
+  @hasOne(() => UserCredentials)
+  userCredentials: UserCredentials;
 
-    constructor(data?: Partial<User>) {
-        super(data);
-    }
+  // Define well-known properties here
+
+  // Indexer property to allow additional data
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [prop: string]: any;
+
+  constructor(data?: Partial<User>) {
+    super(data);
+  }
 }
 
 export interface UserRelations {
-    // describe navigational properties here
+  // describe navigational properties here
 }
 
 export type UserWithRelations = User & UserRelations;

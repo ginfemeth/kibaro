@@ -10,8 +10,9 @@ import { HttpErrors } from '@loopback/rest';
 import { securityId, UserProfile } from '@loopback/security';
 import { compare } from 'bcryptjs';
 import { getRegisteredUser } from '../helper';
-import { User } from '../models/user.model';
+// import { User } from '../models/user.model';
 // import {Credentials, UserRepository} from '../repositories';
+import { User, UserCredentials, CustomCredentials } from '../models';
 
 // import {CustomCredentials, User, UserWithRelations} from '../models';
 import { UserRepository } from '../repositories/user.repository';
@@ -21,18 +22,17 @@ import { UserRepository } from '../repositories/user.repository';
  * using the username and password. You can modify it if your app has different credential fields
  */
 export type Credentials = {
-  username: string;
+  // email: string;
   password: string;
-  // organization: string;
 };
 
 
-export class MyUserService implements UserService<User, Credentials> {
+export class MyUserService implements UserService<User, CustomCredentials> {
   constructor(
     @repository(UserRepository) public userRepository: UserRepository,
   ) { }
 
-  async verifyCredentials(credentials: Credentials): Promise<User> {
+  async verifyCredentials(credentials: CustomCredentials): Promise<User> {
     const invalidCredentialsError = 'Invalid username or password.';
     const unregisteredError = 'Vous n\'avez pas encore de compte.';
 
@@ -73,41 +73,6 @@ export class MyUserService implements UserService<User, Credentials> {
 
     return foundUser;
   }
-  // async MyverifyCredentials(credentials: Credentials): Promise<User> {
-  //   const invalidCredentialsError = 'Invalid username or password.';
-  //   const unregisteredError = 'Vous n\'avez pas encore de compte.';
-
-  //   const foundUser = await this.userRepository.findOne({
-  //     where: { username: credentials.username },
-  //   });
-  //   if (!foundUser) {
-  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
-  //   }
-
-  //   const credentialsFound = await this.userRepository.findCredentials(
-  //     foundUser.id,
-  //   );
-  //   if (!credentialsFound) {
-  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
-  //   }
-
-  //   const passwordMatched = await compare(
-  //     credentials.password,
-  //     credentialsFound.password,
-  //   );
-
-  //   if (!passwordMatched) {
-  //     throw new HttpErrors.Unauthorized(invalidCredentialsError);
-  //   }
-
-  //   // let user = await getRegisteredUser(credentials.username, credentials.organization);
-
-  //   // if (user == null) {
-  //   //   throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
-  //   // }
-
-  //   return foundUser;
-  // }
 
   convertToUserProfile(user: User): UserProfile {
     return {

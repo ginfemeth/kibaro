@@ -22,18 +22,6 @@ export class UserCredentials extends Entity {
 
   @property({
     type: 'string',
-    required: false,
-  })
-  username: string;
-
-  // @property({
-  //   type: 'string',
-  //   required: false,
-  // })
-  // organization: string;
-
-  @property({
-    type: 'string',
     required: true,
     mongodb: {dataType: 'ObjectID'},
   })
