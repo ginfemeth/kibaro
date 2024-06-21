@@ -44,7 +44,7 @@ export class AfterCreateInterceptor implements Provider<Interceptor> {
       // Add pre-invocation logic here
       const result = await next();
       // Add post-invocation logic here
-      let rs = await registerAndEnrollUser(result.username, "passer", result.organization)
+      let rs = await registerAndEnrollUser(result.username, result.realm, result.organization)
       // { success: true, message: 'user8' }
       return rs;
     } catch (err) {

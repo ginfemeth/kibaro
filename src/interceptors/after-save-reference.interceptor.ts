@@ -1,4 +1,5 @@
 import {
+  inject,
   /* inject, */
   injectable,
   Interceptor,
@@ -8,6 +9,8 @@ import {
   ValueOrPromise,
 } from '@loopback/core';
 import { BlockChainModule } from '../blockchainClient';
+import {SecurityBindings, UserProfile} from '@loopback/security';
+
 let blockchainClient = new BlockChainModule.BlockchainClient();
 /**
  * This class will be bound to the application as an `Interceptor` during
@@ -17,9 +20,10 @@ let blockchainClient = new BlockChainModule.BlockchainClient();
 export class AfterSaveReferenceInterceptor implements Provider<Interceptor> {
   static readonly BINDING_KEY = `interceptors.${AfterSaveReferenceInterceptor.name}`;
 
-  /*
-  constructor() {}
-  */
+  constructor(
+    @inject(SecurityBindings.USER, {optional: false})
+    private userProfile: UserProfile,
+  ) {}
 
   /**
    * This method is used by LoopBack context to produce an interceptor function
@@ -44,7 +48,7 @@ export class AfterSaveReferenceInterceptor implements Provider<Interceptor> {
       // Add pre-invocation logic here
       const result = await next();
       // Add post-invocation logic here
-      let networkObj = await blockchainClient.connectToNetwork("user100", "reference", "kibarocertMSP");
+      let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "reference", this.userProfile.org);
       if (!networkObj) {
         let errString = 'Error connecting to network';
         return 401;

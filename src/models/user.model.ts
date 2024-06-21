@@ -17,8 +17,10 @@ export class User extends Entity {
   @property({
     type: 'string',
     id: true,
-    generated: false,
-    defaultFn: 'uuidv4',
+    generated: true,
+    mongodb: {
+        dataType: 'uuid'
+    }
   })
   id: string;
 

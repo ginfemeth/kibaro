@@ -72,6 +72,7 @@ export class MyUserService implements UserService<User, CustomCredentials> {
       name: user.username,
       id: user.id,
       email: user.email,
+      org: user.organization,
     };
   }
 

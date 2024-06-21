@@ -136,37 +136,14 @@ import { CustomCredentials } from '../models';
     return {token, user};
   }
 
-  @post('/hlf-enrollAdmin')
-  @response(200, {
-    description: 'Enroll Admin user and generate certifictate in wallet',
-  })
-  async enrollAdmin(
-    @param.path.string('orgName') orgName: string,
-    @requestBody({
-      content: {
-        'application/json': {
-          type: 'object',
-          schema: {
-            properties: {
-              result: {type: 'string'},
-            },
-          },
-        },
-      },
-    }) data: any,
-  ): Promise<any> {
-    const result = enrollAdmin(orgName);
-    return result;
-  }
-
-  @post('/gameshits/{id}', {
+  @post('/enrollAminUser/{id}', {
     responses: {
       '200': {
         description: 'Return the number of correct answers',
       },
     },
   })
-  async gamesHits(
+  async enrollAminUser(
     @param.path.string('id') id: string,
     @requestBody({
       content: {
