@@ -66,6 +66,9 @@ export class Reference extends Entity {
   @property({
     type: 'date',
     required: true,
+    jsonSchema: {
+      format: 'date',
+    },
   })
   date: string;
 

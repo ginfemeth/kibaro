@@ -25,7 +25,7 @@ const enrollAdmin = async (orgName: string): Promise<{success: boolean}> => {
     // const ccp = getCCP(orgName);
     let ccp = yaml.load(fs.readFileSync('./networkConfig.yaml', 'utf8'));
 
-    const clientOrg = "kibarocertMSP";//kibarocertMSP
+    const clientOrg = orgName;
 
     const org = ccp.organizations[clientOrg];
     const caClient = await getCAClientByOrg(orgName);
@@ -249,7 +249,7 @@ const getCAClientByOrg = async (orgName: string) => {
   // const ccp = getCCP(orgName);
   let ccp = yaml.load(fs.readFileSync('./networkConfig.yaml', 'utf8'));
 
-  const clientOrg = "kibarocertMSP";
+  const clientOrg = orgName;
   logger.debug("Client Org -> ", clientOrg);
   const org = ccp.organizations[clientOrg];
   logger.debug("Org -> ", org);

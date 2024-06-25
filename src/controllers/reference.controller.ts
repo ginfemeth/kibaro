@@ -25,13 +25,14 @@ import { AfterSaveReferenceInterceptor } from "../interceptors";
 import { intercept } from "@loopback/core";
 let blockchainClient = new BlockChainModule.BlockchainClient();
 
-@authenticate('jwt')
+
 export class ReferenceController {
   constructor(
     @repository(ReferenceRepository)
     public referenceRepository: ReferenceRepository,
   ) { }
 
+  @authenticate('jwt')
   @intercept(AfterSaveReferenceInterceptor.BINDING_KEY)
   @post('/references')
   @response(200, {
@@ -103,6 +104,7 @@ export class ReferenceController {
     return (JSON.stringify(JSON.parse(results.toString()), null, 2));
   }
 
+  @authenticate('jwt')
   @get('/references/count')
   @response(200, {
     description: 'Reference model count',
@@ -114,6 +116,7 @@ export class ReferenceController {
     return this.referenceRepository.count(where);
   }
 
+  @authenticate('jwt')
   @get('/references')
   @response(200, {
     description: 'Array of Reference model instances',
@@ -145,6 +148,7 @@ export class ReferenceController {
     },
   })
 
+  @authenticate('jwt')
   async findAll(
   ): Promise<any> {
     let networkObj = await blockchainClient.connectToNetwork("user100", "reference", "kibarocertMSP");
@@ -157,6 +161,7 @@ export class ReferenceController {
     return JSON.stringify(JSON.parse(results.toString()));
   }
 
+  @authenticate('jwt')
   @patch('/references')
   @response(200, {
     description: 'Reference PATCH success count',
@@ -211,9 +216,11 @@ export class ReferenceController {
     }
     let results;
     results = await networkObj.contract.evaluateTransaction("ReadReference", id);
-    return JSON.stringify(JSON.parse(results.toString()));
+    // return JSON.stringify(JSON.parse(results.toString()));
+    return results;
   }
 
+  @authenticate('jwt')
   @patch('/references/{id}')
   @response(204, {
     description: 'Reference PATCH success',
@@ -232,6 +239,7 @@ export class ReferenceController {
     await this.referenceRepository.updateById(id, reference);
   }
 
+  @authenticate('jwt')
   @put('/references/{id}')
   @response(204, {
     description: 'Reference PUT success',
@@ -243,6 +251,7 @@ export class ReferenceController {
     await this.referenceRepository.replaceById(id, reference);
   }
 
+  @authenticate('jwt')
   @del('/references/{id}')
   @response(204, {
     description: 'Reference DELETE success',

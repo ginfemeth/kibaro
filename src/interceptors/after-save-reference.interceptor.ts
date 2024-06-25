@@ -1,6 +1,5 @@
 import {
   inject,
-  /* inject, */
   injectable,
   Interceptor,
   InvocationContext,
@@ -9,7 +8,9 @@ import {
   ValueOrPromise,
 } from '@loopback/core';
 import { BlockChainModule } from '../blockchainClient';
-import {SecurityBindings, UserProfile} from '@loopback/security';
+import {SecurityBindings, securityId, UserProfile} from '@loopback/security';
+import { UserServiceBindings } from '../keys';
+import { MyUserService } from '../services';
 
 let blockchainClient = new BlockChainModule.BlockchainClient();
 /**
@@ -23,6 +24,8 @@ export class AfterSaveReferenceInterceptor implements Provider<Interceptor> {
   constructor(
     @inject(SecurityBindings.USER, {optional: false})
     private userProfile: UserProfile,
+    @inject(UserServiceBindings.USER_SERVICE)
+        public userService: MyUserService,
   ) {}
 
   /**
@@ -46,29 +49,36 @@ export class AfterSaveReferenceInterceptor implements Provider<Interceptor> {
   ) {
     try {
       // Add pre-invocation logic here
+      
       const result = await next();
       // Add post-invocation logic here
-      let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "reference", this.userProfile.org);
-      if (!networkObj) {
-        let errString = 'Error connecting to network';
-        return 401;
+      if (this.userProfile) {
+        const user =this.userService.findUserById(this.userProfile[securityId]);
+        console.log('Logged-in user:', this.userProfile);
+        let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "reference", (await user).organization);
+        // let networkObj = await blockchainClient.connectToNetwork('user301', "reference", "kibarocertMSP");
+        if (!networkObj) {
+          let errString = 'Error connecting to network';
+          return errString;
+        }
+        let rs;
+        rs = await networkObj.contract.submitTransaction("CreateReference",
+          result.id,
+          result.prenom,
+          result.nom,
+          result.mission,
+          result.entreprise,
+          result.referent,
+          result.poste,
+          result.email,
+          result.phone,
+          result.appreciation,
+          result.date
+        );
+        return (JSON.stringify(JSON.parse(rs.toString()), null, 2));
+      } else {
+        console.log('No user is logged in');
       }
-
-      let rs;
-      rs = await networkObj.contract.submitTransaction("CreateReference",
-        result.id,
-        result.prenom,
-        result.nom,
-        result.mission,
-        result.entreprise,
-        result.referent,
-        result.poste,
-        result.email,
-        result.phone,
-        result.appreciation,
-        result.date
-      );
-      return (JSON.stringify(JSON.parse(rs.toString()), null, 2));
     } catch (err) {
       // Add error handling logic here
       throw err;

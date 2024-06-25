@@ -11,7 +11,6 @@ import { securityId, UserProfile } from '@loopback/security';
 import { compare } from 'bcryptjs';
 import { getRegisteredUser } from '../helper';
 import { User, CustomCredentials } from '../models';
-
 import { UserRepository } from '../repositories/user.repository';
 
 /**
@@ -56,12 +55,6 @@ export class MyUserService implements UserService<User, CustomCredentials> {
     if (user == null) {
       throw new HttpErrors.NetworkAuthenticationRequire(unregisteredError);
     }
-    const currentUser = {
-      username: foundUser.username,
-      password: credentialsFound.password,
-      organization: credentials.organization
-
-    }
 
     return foundUser;
   }
@@ -72,7 +65,7 @@ export class MyUserService implements UserService<User, CustomCredentials> {
       name: user.username,
       id: user.id,
       email: user.email,
-      org: user.organization,
+      organization: user.organization,
     };
   }
 

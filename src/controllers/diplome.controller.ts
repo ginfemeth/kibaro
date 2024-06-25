@@ -12,7 +12,7 @@ const utf8Decoder = new TextDecoder();
 
 let blockchainClient = new BlockChainModule.BlockchainClient();
 
-@authenticate('jwt')
+
 export class DiplomeController {
   constructor(
     @repository(DiplomeRepository)
@@ -20,6 +20,7 @@ export class DiplomeController {
   ) { }
 
   @intercept(AfterSaveDiplomeInterceptor.BINDING_KEY)
+  @authenticate('jwt')
   @post('/diplomes')
   @response(200, {
     description: 'Diplome model instance',
@@ -41,6 +42,7 @@ export class DiplomeController {
     return this.diplomeRepository.create(diplome);
   }
 
+  @authenticate('jwt')
   @post('/hlf-diplomes')
   @response(200, {
     description: 'Save diplome model instance to HLF',
@@ -85,6 +87,7 @@ export class DiplomeController {
     return JSON.parse(utf8Decoder.decode(results));
   }
 
+  @authenticate('jwt')
   @get('/diplomes/count')
   @response(200, {
     description: 'Diplome model count',
@@ -96,6 +99,7 @@ export class DiplomeController {
     return this.diplomeRepository.count(where);
   }
 
+  @authenticate('jwt')
   @get('/diplomes')
   @response(200, {
     description: 'Array of Diplome model instances',
@@ -115,6 +119,7 @@ export class DiplomeController {
     return this.diplomeRepository.find(filter);
   }
 
+  @authenticate('jwt')
   @get('/hlf-diplomes')
   @response(200, {
     description: 'Array of Diplome model instances from HLF',
@@ -140,6 +145,7 @@ export class DiplomeController {
     return JSON.stringify(JSON.parse(results.toString()));
   }
 
+  @authenticate('jwt')
   @patch('/diplomes')
   @response(200, {
     description: 'Diplome PATCH success count',
@@ -199,6 +205,7 @@ export class DiplomeController {
     return JSON.stringify(JSON.parse(results.toString()));
   }
 
+  @authenticate('jwt')
   @patch('/diplomes/{id}')
   @response(204, {
     description: 'Diplome PATCH success',
@@ -217,6 +224,7 @@ export class DiplomeController {
     await this.diplomeRepository.updateById(id, diplome);
   }
 
+  @authenticate('jwt')
   @put('/diplomes/{id}')
   @response(204, {
     description: 'Diplome PUT success',

@@ -5,7 +5,7 @@ import {
 import { BootMixin } from '@loopback/boot';
 import { ApplicationConfig } from '@loopback/core';
 import { RepositoryMixin } from '@loopback/repository';
-import { RestApplication } from '@loopback/rest';
+import { DefaultSequence, RestApplication } from '@loopback/rest';
 import {
   RestExplorerBindings,
   RestExplorerComponent,
@@ -16,6 +16,7 @@ import { KibaroMongoDataSource } from './datasources';
 import { MySequence } from './sequence';
 import { MyUserService } from './services/user.service';
 import { UserServiceBindings } from "./keys";
+import { AfterSaveDiplomeInterceptor, AfterSaveReferenceInterceptor } from "./interceptors";
 
 export { ApplicationConfig };
 
@@ -43,7 +44,8 @@ export class KibaroApplication extends BootMixin(
     this.component(RestExplorerComponent);
     // Bind user service
     this.bind(UserServiceBindings.USER_SERVICE).toClass(MyUserService),
-
+    // this.bind('interceptors.UserProfileInterceptor').toProvider(AfterSaveDiplomeInterceptor);
+    // this.bind('interceptors.UserProfileInterceptor').toProvider(AfterSaveReferenceInterceptor);
     this.projectRoot = __dirname;
     // Customize @loopback/boot Booter Conventions here
     this.bootOptions = {

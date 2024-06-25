@@ -6,23 +6,23 @@ certificateAuthorities:
       enrollSecret: enrollpw
     tlsCACerts:
       pem:
-        - |
-          -----BEGIN CERTIFICATE-----
-          MIICcTCCAhegAwIBAgIQZAgtZTH1co8dAvGi9DDqMjAKBggqhkjOPQQDAjBSMRMw
-          EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
-          ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0MDda
-          Fw0zNDA0MjgxMjU0MDdaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
-          ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
-          cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfCQwvQ2lOkY8e0MptC1Nm4DB
-          prZjGGsnh/84iBfoKbn8zH1tChb0F88YXA/9P6btrcD/Au/5RLiJATmGRQpQeaOB
-          zjCByzAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
-          BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIBugdfmrnLYcEAegXhO1hwt0
-          PhVVxPPMTPPPAhT+gy8ZMF4GA1UdEQRXMFWCCWxvY2FsaG9zdIIIaW5waGItY2GC
-          DmlucGhiLWNhLmlucGhigihpbnBoYi1jYS5pbnBoYi5ibG9ja2NoYWluLmtpYmFy
-          b2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIQD0QkuStOyjSmv6lmuJ
-          S8CVeYz6RTj3XhB9ulYIiN5pBAIgSEFgFyugkKG6t4B1TYEfu9M8BhtEK6/QoP0a
-          27he1nA=
-          -----END CERTIFICATE-----
+      - |
+        -----BEGIN CERTIFICATE-----
+        MIICcTCCAhegAwIBAgIQZAgtZTH1co8dAvGi9DDqMjAKBggqhkjOPQQDAjBSMRMw
+        EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
+        ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0MDda
+        Fw0zNDA0MjgxMjU0MDdaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
+        ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
+        cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEfCQwvQ2lOkY8e0MptC1Nm4DB
+        prZjGGsnh/84iBfoKbn8zH1tChb0F88YXA/9P6btrcD/Au/5RLiJATmGRQpQeaOB
+        zjCByzAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
+        BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIBugdfmrnLYcEAegXhO1hwt0
+        PhVVxPPMTPPPAhT+gy8ZMF4GA1UdEQRXMFWCCWxvY2FsaG9zdIIIaW5waGItY2GC
+        DmlucGhiLWNhLmlucGhigihpbnBoYi1jYS5pbnBoYi5ibG9ja2NoYWluLmtpYmFy
+        b2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIQD0QkuStOyjSmv6lmuJ
+        S8CVeYz6RTj3XhB9ulYIiN5pBAIgSEFgFyugkKG6t4B1TYEfu9M8BhtEK6/QoP0a
+        27he1nA=
+        -----END CERTIFICATE-----
     url: https://inphb-ca.inphb.blockchain.kibarocert.com:443
   kibarocert-ca.kibarocert:
     caName: ca
@@ -31,23 +31,23 @@ certificateAuthorities:
       enrollSecret: enrollpw
     tlsCACerts:
       pem:
-        - |
-          -----BEGIN CERTIFICATE-----
-          MIICizCCAjGgAwIBAgIRAPqTy8mVzVhqi/K3AHmkCrQwCgYIKoZIzj0EAwIwUjET
-          MBEGA1UEBhMKQ2FsaWZvcm5pYTEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxFDASBgNV
-          BAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMwHhcNMjQwNDI3MTI1MzA5
-          WhcNMzQwNDI4MTI1MzA5WjBSMRMwEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQH
-          EwAxCTAHBgNVBAkTADEUMBIGA1UEChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZh
-          YnJpYzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAkheiM3tyS8k2dbThpR7VqA
-          EHRDIG2uX27USIly325dgluzxKRy6AuUjZ6BaEv1ZQWhyHRRkQhejYO1WO4ZDSSj
-          gecwgeQwDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
-          BQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCO4dvzgoO/5cvPdOkrQ812
-          axsQbdZBOB9KwrVWigfzpzB3BgNVHREEcDBugglsb2NhbGhvc3SCDWtpYmFyb2Nl
-          cnQtY2GCGGtpYmFyb2NlcnQtY2Eua2liYXJvY2VydIIya2liYXJvY2VydC1jYS5r
-          aWJhcm9jZXJ0LmJsb2NrY2hhaW4ua2liYXJvY2VydC5jb22HBH8AAAEwCgYIKoZI
-          zj0EAwIDSAAwRQIgKw62p4zz6dYMdBv4XK93EaXl+PpqEuZJj0HTJRP7/IYCIQDK
-          rnVqv1d1IHv8V2G+TGTIkros2M6+b9+uamscrWL/iQ==
-          -----END CERTIFICATE-----
+      - |
+        -----BEGIN CERTIFICATE-----
+        MIICizCCAjGgAwIBAgIRAPqTy8mVzVhqi/K3AHmkCrQwCgYIKoZIzj0EAwIwUjET
+        MBEGA1UEBhMKQ2FsaWZvcm5pYTEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxFDASBgNV
+        BAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMwHhcNMjQwNDI3MTI1MzA5
+        WhcNMzQwNDI4MTI1MzA5WjBSMRMwEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQH
+        EwAxCTAHBgNVBAkTADEUMBIGA1UEChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZh
+        YnJpYzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAkheiM3tyS8k2dbThpR7VqA
+        EHRDIG2uX27USIly325dgluzxKRy6AuUjZ6BaEv1ZQWhyHRRkQhejYO1WO4ZDSSj
+        gecwgeQwDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+        BQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCCO4dvzgoO/5cvPdOkrQ812
+        axsQbdZBOB9KwrVWigfzpzB3BgNVHREEcDBugglsb2NhbGhvc3SCDWtpYmFyb2Nl
+        cnQtY2GCGGtpYmFyb2NlcnQtY2Eua2liYXJvY2VydIIya2liYXJvY2VydC1jYS5r
+        aWJhcm9jZXJ0LmJsb2NrY2hhaW4ua2liYXJvY2VydC5jb22HBH8AAAEwCgYIKoZI
+        zj0EAwIDSAAwRQIgKw62p4zz6dYMdBv4XK93EaXl+PpqEuZJj0HTJRP7/IYCIQDK
+        rnVqv1d1IHv8V2G+TGTIkros2M6+b9+uamscrWL/iQ==
+        -----END CERTIFICATE-----
     url: https://kibarocert-ca.kibarocert.blockchain.kibarocert.com:443
   montpellier-bs-ca.montpellier-bs:
     caName: ca
@@ -56,25 +56,50 @@ certificateAuthorities:
       enrollSecret: enrollpw
     tlsCACerts:
       pem:
-        - |
-          -----BEGIN CERTIFICATE-----
-          MIICoTCCAkegAwIBAgIQQsmxIo0zZB5HLNGgUGzc+zAKBggqhkjOPQQDAjBSMRMw
-          EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
-          ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0Mzla
-          Fw0zNDA0MjgxMjU0MzlaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
-          ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
-          cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKEwRkNwFfAFKiQkNibbSiTN+
-          jDXy0tbquNRDM+G1OWjwpcc/IZrDCd3GJuWGfKveIigEesZxN90X4pLR2X+ylaOB
-          /jCB+zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
-          BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIIKL15Ifd9oqvUXtbg4xVxN5
-          V1+hXD97rm7EZjpBwWjPMIGNBgNVHREEgYUwgYKCCWxvY2FsaG9zdIIRbW9udHBl
-          bGxpZXItYnMtY2GCIG1vbnRwZWxsaWVyLWJzLWNhLm1vbnRwZWxsaWVyLWJzgjpt
-          b250cGVsbGllci1icy1jYS5tb250cGVsbGllci1icy5ibG9ja2NoYWluLmtpYmFy
-          b2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIGdrBXIjPIXlWHMqT1hd
-          Z2dUKCI0TVdaDwMkJs92aBJqAiEAzck8YRPU+rJiqvtVtVm/WuFYcqjm0ZVWCsAn
-          IM0R6pw=
-          -----END CERTIFICATE-----
+      - |
+        -----BEGIN CERTIFICATE-----
+        MIICoTCCAkegAwIBAgIQQsmxIo0zZB5HLNGgUGzc+zAKBggqhkjOPQQDAjBSMRMw
+        EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
+        ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA0MjcxMjU0Mzla
+        Fw0zNDA0MjgxMjU0MzlaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
+        ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
+        cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKEwRkNwFfAFKiQkNibbSiTN+
+        jDXy0tbquNRDM+G1OWjwpcc/IZrDCd3GJuWGfKveIigEesZxN90X4pLR2X+ylaOB
+        /jCB+zAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
+        BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIIKL15Ifd9oqvUXtbg4xVxN5
+        V1+hXD97rm7EZjpBwWjPMIGNBgNVHREEgYUwgYKCCWxvY2FsaG9zdIIRbW9udHBl
+        bGxpZXItYnMtY2GCIG1vbnRwZWxsaWVyLWJzLWNhLm1vbnRwZWxsaWVyLWJzgjpt
+        b250cGVsbGllci1icy1jYS5tb250cGVsbGllci1icy5ibG9ja2NoYWluLmtpYmFy
+        b2NlcnQuY29thwR/AAABMAoGCCqGSM49BAMCA0gAMEUCIGdrBXIjPIXlWHMqT1hd
+        Z2dUKCI0TVdaDwMkJs92aBJqAiEAzck8YRPU+rJiqvtVtVm/WuFYcqjm0ZVWCsAn
+        IM0R6pw=
+        -----END CERTIFICATE-----
     url: https://montpellier-bs-ca.montpellier-bs.blockchain.kibarocert.com:443
+  opmobility-ca.opmobility:
+    caName: ca
+    registrar:
+      enrollId: enroll
+      enrollSecret: enrollpw
+    tlsCACerts:
+      pem:
+      - |
+        -----BEGIN CERTIFICATE-----
+        MIICijCCAjGgAwIBAgIRAJa317IZ+A66oMBV2IT6/0kwCgYIKoZIzj0EAwIwUjET
+        MBEGA1UEBhMKQ2FsaWZvcm5pYTEJMAcGA1UEBxMAMQkwBwYDVQQJEwAxFDASBgNV
+        BAoTC0h5cGVybGVkZ2VyMQ8wDQYDVQQLEwZGYWJyaWMwHhcNMjQwNjIyMDcyMzQ2
+        WhcNMzQwNjIzMDcyMzQ2WjBSMRMwEQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQH
+        EwAxCTAHBgNVBAkTADEUMBIGA1UEChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZh
+        YnJpYzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABCEPHAzEe/UEIQCrB4PgeXti
+        yhjQWdCxw23uBXF0aobGfKd6nXuX4IPfNnJAgGVHICvMOisrWPt5fKtbeHnCYDyj
+        gecwgeQwDgYDVR0PAQH/BAQDAgGmMB0GA1UdJQQWMBQGCCsGAQUFBwMCBggrBgEF
+        BQcDATAPBgNVHRMBAf8EBTADAQH/MCkGA1UdDgQiBCA1CXOvWpo/5iFGP8sfpwT4
+        8nK/eTX9Tx0/CYpc7YzBmDB3BgNVHREEcDBugglsb2NhbGhvc3SCDW9wbW9iaWxp
+        dHktY2GCGG9wbW9iaWxpdHktY2Eub3Btb2JpbGl0eYIyb3Btb2JpbGl0eS1jYS5v
+        cG1vYmlsaXR5LmJsb2NrY2hhaW4ua2liYXJvY2VydC5jb22HBH8AAAEwCgYIKoZI
+        zj0EAwIDRwAwRAIgb1copWKWHjPQy4ChoVfAJ+gKW97cRSpTM/Z1gmr2WBkCIChc
+        znSChji0DtS6qNLgnwbQK8Tlx8LrJqo2igFKP7ir
+        -----END CERTIFICATE-----
+    url: https://opmobility-ca.opmobility.blockchain.kibarocert.com:443
   orderer-ca.orderer:
     caName: ca
     registrar:
@@ -82,32 +107,32 @@ certificateAuthorities:
       enrollSecret: enrollpw
     tlsCACerts:
       pem:
-        - |
-          -----BEGIN CERTIFICATE-----
-          MIICfDCCAiGgAwIBAgIQRM37Ok8R62JTFiYcw1nw9zAKBggqhkjOPQQDAjBSMRMw
-          EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
-          ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA1MDUwMjI3MzVa
-          Fw0zNDA1MDYwMjI3MzVaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
-          ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
-          cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKUZWgL2gfgdGqBRF+AiVQPQ3
-          WH+jWmqOfRkbaGK4u2/opZ6ewJNaiHjb3CTejYzwBo2cDa78s0zPS5GAMI9kx6OB
-          2DCB1TAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
-          BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIAXo1MuQ0/7WA12YKbRyehV3
-          /jZ2HAxQa672Y69OMXjwMGgGA1UdEQRhMF+CCWxvY2FsaG9zdIIKb3JkZXJlci1j
-          YYISb3JkZXJlci1jYS5vcmRlcmVygixvcmRlcmVyLWNhLm9yZGVyZXIuYmxvY2tj
-          aGFpbi5raWJhcm9jZXJ0LmNvbYcEfwAAATAKBggqhkjOPQQDAgNJADBGAiEA6HLp
-          iwim8ZTWrwZbB7yU1eNtkAVohehJ5XJhYsoEticCIQCJNT8bAXlFHiO4nIdtqdWU
-          iA2DYDhz7HOpaWQinl7vEg==
-          -----END CERTIFICATE-----
+      - |
+        -----BEGIN CERTIFICATE-----
+        MIICfDCCAiGgAwIBAgIQRM37Ok8R62JTFiYcw1nw9zAKBggqhkjOPQQDAjBSMRMw
+        EQYDVQQGEwpDYWxpZm9ybmlhMQkwBwYDVQQHEwAxCTAHBgNVBAkTADEUMBIGA1UE
+        ChMLSHlwZXJsZWRnZXIxDzANBgNVBAsTBkZhYnJpYzAeFw0yNDA1MDUwMjI3MzVa
+        Fw0zNDA1MDYwMjI3MzVaMFIxEzARBgNVBAYTCkNhbGlmb3JuaWExCTAHBgNVBAcT
+        ADEJMAcGA1UECRMAMRQwEgYDVQQKEwtIeXBlcmxlZGdlcjEPMA0GA1UECxMGRmFi
+        cmljMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEKUZWgL2gfgdGqBRF+AiVQPQ3
+        WH+jWmqOfRkbaGK4u2/opZ6ewJNaiHjb3CTejYzwBo2cDa78s0zPS5GAMI9kx6OB
+        2DCB1TAOBgNVHQ8BAf8EBAMCAaYwHQYDVR0lBBYwFAYIKwYBBQUHAwIGCCsGAQUF
+        BwMBMA8GA1UdEwEB/wQFMAMBAf8wKQYDVR0OBCIEIAXo1MuQ0/7WA12YKbRyehV3
+        /jZ2HAxQa672Y69OMXjwMGgGA1UdEQRhMF+CCWxvY2FsaG9zdIIKb3JkZXJlci1j
+        YYISb3JkZXJlci1jYS5vcmRlcmVygixvcmRlcmVyLWNhLm9yZGVyZXIuYmxvY2tj
+        aGFpbi5raWJhcm9jZXJ0LmNvbYcEfwAAATAKBggqhkjOPQQDAgNJADBGAiEA6HLp
+        iwim8ZTWrwZbB7yU1eNtkAVohehJ5XJhYsoEticCIQCJNT8bAXlFHiO4nIdtqdWU
+        iA2DYDhz7HOpaWQinl7vEg==
+        -----END CERTIFICATE-----
     url: https://orderer-ca.orderer.blockchain.kibarocert.com:443
 channels:
-  certificates:
+  _default:
     orderers:
-      - orderer-node1.orderer
-      - orderer-node2.orderer
-      - orderer-node3.orderer
-      - orderer-node4.orderer
-      - orderer-node5.orderer
+    - orderer-node1.orderer
+    - orderer-node2.orderer
+    - orderer-node3.orderer
+    - orderer-node4.orderer
+    - orderer-node5.orderer
     peers:
       inphb-peer1.inphb:
         chaincodeQuery: true
@@ -146,6 +171,18 @@ channels:
         eventSource: true
         ledgerQuery: true
       montpellier-bs-peer2.montpellier-bs:
+        chaincodeQuery: true
+        discover: true
+        endorsingPeer: true
+        eventSource: true
+        ledgerQuery: true
+      opmobility-peer1.opmobility:
+        chaincodeQuery: true
+        discover: true
+        endorsingPeer: true
+        eventSource: true
+        ledgerQuery: true
+      opmobility-peer2.opmobility:
         chaincodeQuery: true
         discover: true
         endorsingPeer: true
@@ -261,15 +298,48 @@ orderers:
         -----END CERTIFICATE-----
     url: grpcs://orderer5-ord.orderer.blockchain.kibarocert.com:443
 organizations:
+  OPmobility:
+    cryptoPath: /tmp/cryptopath
+    mspid: OPmobility
+    orderers: []
+    peers:
+    - opmobility-peer1.opmobility
+    - opmobility-peer2.opmobility
+    users:
+      admin:
+        cert:
+          pem: |
+            -----BEGIN CERTIFICATE-----
+            MIICUzCCAfmgAwIBAgIUIKbREje4yoAIDLsiWHRELmbM760wCgYIKoZIzj0EAwIw
+            ajELMAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGlj
+            YW50ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEL
+            MAkGA1UEAxMCY2EwHhcNMjQwNjIyMDcyMzQ2WhcNMjUwNjIzMDczNDAwWjAgMQ4w
+            DAYDVQQLEwVhZG1pbjEOMAwGA1UEAxMFYWRtaW4wWTATBgcqhkjOPQIBBggqhkjO
+            PQMBBwNCAARPS/HV3oxVLehWIVxez0gAqk9OfOieNacbOL8foYN/N0WLo4CNDuqv
+            nHZ3Y3ilGiCWO9NEHkBzlNKPM6xiwHo5o4HGMIHDMA4GA1UdDwEB/wQEAwIHgDAM
+            BgNVHRMBAf8EAjAAMB0GA1UdDgQWBBR796ywq4EvkLZQ8XW2+pnbn1xb3DArBgNV
+            HSMEJDAigCCcgyKTxiRByY4Ihopg1vDuXko18qdu4T6hcQMtmCfr5DBXBggqAwQF
+            BgcIAQRLeyJhdHRycyI6eyJoZi5BZmZpbGlhdGlvbiI6IiIsImhmLkVucm9sbG1l
+            bnRJRCI6ImFkbWluIiwiaGYuVHlwZSI6ImFkbWluIn19MAoGCCqGSM49BAMCA0gA
+            MEUCIQDY+ywKRTd4zNXSsIHAXeqxRZHvIaAPjIGdFXuXVvoE0QIgDPSZWHUtniOm
+            Mnk9qxoQK3KHIcScBOmaqdewv9dQTpc=
+            -----END CERTIFICATE-----
+        key:
+          pem: |
+            -----BEGIN PRIVATE KEY-----
+            MIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQg/K9ZWS/o0Wv3fpYd
+            3oDYjjKzsqmK+M7z9wmwc9dkuHihRANCAARPS/HV3oxVLehWIVxez0gAqk9OfOie
+            NacbOL8foYN/N0WLo4CNDuqvnHZ3Y3ilGiCWO9NEHkBzlNKPM6xiwHo5
+            -----END PRIVATE KEY-----
   OrdererMSP:
     cryptoPath: /tmp/cryptopath
     mspid: OrdererMSP
     orderers:
-      - orderer-node1.orderer
-      - orderer-node2.orderer
-      - orderer-node3.orderer
-      - orderer-node4.orderer
-      - orderer-node5.orderer
+    - orderer-node1.orderer
+    - orderer-node2.orderer
+    - orderer-node3.orderer
+    - orderer-node4.orderer
+    - orderer-node5.orderer
     peers: []
     users: {}
   inphbMSP:
@@ -277,8 +347,8 @@ organizations:
     mspid: inphbMSP
     orderers: []
     peers:
-      - inphb-peer1.inphb
-      - inphb-peer2.inphb
+    - inphb-peer1.inphb
+    - inphb-peer2.inphb
     users:
       admin:
         cert:
@@ -310,9 +380,9 @@ organizations:
     mspid: kibarocertMSP
     orderers: []
     peers:
-      - kibarocert-peer1.kibarocert
-      - kibarocert-peer2.kibarocert
-      - kibarocert-peer3.kibarocert
+    - kibarocert-peer1.kibarocert
+    - kibarocert-peer2.kibarocert
+    - kibarocert-peer3.kibarocert
     users:
       admin:
         cert:
@@ -344,8 +414,8 @@ organizations:
     mspid: montpellier-bsMSP
     orderers: []
     peers:
-      - montpellier-bs-peer1.montpellier-bs
-      - montpellier-bs-peer2.montpellier-bs
+    - montpellier-bs-peer1.montpellier-bs
+    - montpellier-bs-peer2.montpellier-bs
     users:
       admin:
         cert:
@@ -520,4 +590,46 @@ peers:
         8SKQbpVY04aV
         -----END CERTIFICATE-----
     url: grpcs://peer2-montpellier-bs.montpellier-bs.blockchain.kibarocert.com:443
+  opmobility-peer1.opmobility:
+    grpcOptions:
+      allow-insecure: false
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICRTCCAeygAwIBAgIRAKdo5niTdB2jNv/HhoD0ZiYwCgYIKoZIzj0EAwIwbTEL
+        MAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGljYW50
+        ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEOMAwG
+        A1UEAxMFdGxzY2EwHhcNMjQwNjIyMDcyMzQ2WhcNMzQwNjIzMDcyMzQ2WjBtMQsw
+        CQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl
+        MRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD
+        VQQDEwV0bHNjYTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGKO5nK0jcS1IAwR
+        RPNnXj/GA3rWbdShoCaVPqoXteqABh1Oc2dUCYDt+6V2ujEzCI9cyQy+mWAjLjai
+        ehHH3VejbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+        KwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgSaHSP2TvmUsQoe3O
+        NuVyu6GPydNSEleEBntUHAYznekwCgYIKoZIzj0EAwIDRwAwRAIgeyv/IaP61n4K
+        sEHC45/9JJQrQkJuAOcvIMZrp0fcq5MCIDlwB5QjBBuuzwa3j7t/mb/SmvqAQLVY
+        iK7DShqyf6DB
+        -----END CERTIFICATE-----
+    url: grpcs://peer1-opmobility.opmobility.blockchain.kibarocert.com:443
+  opmobility-peer2.opmobility:
+    grpcOptions:
+      allow-insecure: false
+    tlsCACerts:
+      pem: |
+        -----BEGIN CERTIFICATE-----
+        MIICRTCCAeygAwIBAgIRAKdo5niTdB2jNv/HhoD0ZiYwCgYIKoZIzj0EAwIwbTEL
+        MAkGA1UEBhMCRVMxETAPBgNVBAcTCEFsaWNhbnRlMREwDwYDVQQJEwhBbGljYW50
+        ZTEZMBcGA1UEChMQS3VuZyBGdSBTb2Z0d2FyZTENMAsGA1UECxMEVGVjaDEOMAwG
+        A1UEAxMFdGxzY2EwHhcNMjQwNjIyMDcyMzQ2WhcNMzQwNjIzMDcyMzQ2WjBtMQsw
+        CQYDVQQGEwJFUzERMA8GA1UEBxMIQWxpY2FudGUxETAPBgNVBAkTCEFsaWNhbnRl
+        MRkwFwYDVQQKExBLdW5nIEZ1IFNvZnR3YXJlMQ0wCwYDVQQLEwRUZWNoMQ4wDAYD
+        VQQDEwV0bHNjYTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABGKO5nK0jcS1IAwR
+        RPNnXj/GA3rWbdShoCaVPqoXteqABh1Oc2dUCYDt+6V2ujEzCI9cyQy+mWAjLjai
+        ehHH3VejbTBrMA4GA1UdDwEB/wQEAwIBpjAdBgNVHSUEFjAUBggrBgEFBQcDAgYI
+        KwYBBQUHAwEwDwYDVR0TAQH/BAUwAwEB/zApBgNVHQ4EIgQgSaHSP2TvmUsQoe3O
+        NuVyu6GPydNSEleEBntUHAYznekwCgYIKoZIzj0EAwIDRwAwRAIgeyv/IaP61n4K
+        sEHC45/9JJQrQkJuAOcvIMZrp0fcq5MCIDlwB5QjBBuuzwa3j7t/mb/SmvqAQLVY
+        iK7DShqyf6DB
+        -----END CERTIFICATE-----
+    url: grpcs://peer2-opmobility.opmobility.blockchain.kibarocert.com:443
 version: 1.0.0

@@ -16,6 +16,11 @@
             "org": "montpellier-bsMSP",
             "username": "enroll",
             "password": "enrollpw"
+        },
+        {
+            "org": "OPmobility",
+            "username": "enroll",
+            "password": "enrollpw"
         }
     ]
 }

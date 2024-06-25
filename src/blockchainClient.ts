@@ -2,16 +2,18 @@ const yaml = require('js-yaml');
 import {Gateway, Wallet} from "fabric-network";
 import fs from 'fs';
 import {createWallet} from './helper';
+
 var wallet: Wallet;
-// A wallet stores a collection of identities for use
-(async () => {
-  wallet = await createWallet('kibarocertMSP');
-})()
+// (async () => {
+//   wallet = await createWallet("org");
+// })()
 
 export module BlockChainModule {
   export class BlockchainClient {
     async connectToNetwork(identityLabel: string, chaincode: string, org: string) {
+// A wallet stores a collection of identities for use      
       const gateway = new Gateway();
+      wallet = await createWallet(org);
       try {
         console.log('connecting to Fabric network...')
         let connectionProfile = yaml.load(fs.readFileSync('./networkConfig.yaml', 'utf8'));

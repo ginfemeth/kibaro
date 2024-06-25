@@ -183,4 +183,13 @@ import { CustomCredentials } from '../models';
   ): Promise<string> {
     return loggedInUserProfile[securityId];
   }
+
+
+  @authenticate('jwt')
+  @get('/protected-endpoint')
+  async protectedEndpoint(
+    @inject(SecurityBindings.USER) currentUser: UserProfile,
+  ): Promise<object> {
+    return {message: 'You have access to this endpoint.', user: currentUser};
+  }
 }

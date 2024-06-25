@@ -1,6 +1,5 @@
 import {
   inject,
-  /* inject, */
   injectable,
   Interceptor,
   InvocationContext,
@@ -9,7 +8,9 @@ import {
   ValueOrPromise,
 } from '@loopback/core';
 import { BlockChainModule } from '../blockchainClient';
-import {SecurityBindings, UserProfile} from '@loopback/security';
+import {SecurityBindings, UserProfile, securityId} from '@loopback/security';
+import { UserServiceBindings } from '../keys';
+import { MyUserService } from '../services';
 
 let blockchainClient = new BlockChainModule.BlockchainClient();
 
@@ -22,8 +23,10 @@ export class AfterSaveDiplomeInterceptor implements Provider<Interceptor> {
   static readonly BINDING_KEY = `interceptors.${AfterSaveDiplomeInterceptor.name}`;
 
   constructor(
-    @inject(SecurityBindings.USER, {optional: false})
+    @inject(SecurityBindings.USER, {optional: true})
     private userProfile: UserProfile,
+    @inject(UserServiceBindings.USER_SERVICE)
+        public userService: MyUserService,
   ) {}
 
   /**
@@ -48,8 +51,10 @@ export class AfterSaveDiplomeInterceptor implements Provider<Interceptor> {
     try {
       // Add pre-invocation logic here
       const result = await next();
-      // Add post-invocation logic here
-      let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "diplome", this.userProfile.org);
+      if (this.userProfile) {
+
+        const user =this.userService.findUserById(this.userProfile[securityId]);
+        let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "diplome", (await user).organization);
 
       if (!networkObj) {
         let errString = 'Error connecting to network';
@@ -66,9 +71,11 @@ export class AfterSaveDiplomeInterceptor implements Provider<Interceptor> {
         result.cid,
         result.date
       );
-      
+      console.log(rs);
       return (JSON.stringify(JSON.parse(rs.toString()), null, 2));
-      
+      }else{
+        console.log('No user is logged in');
+      }
     } catch (err) {
       // Add error handling logic here
       throw err;
