@@ -5,10 +5,10 @@ import {BlockChainModule} from '../blockchainClient';
 import {getRegisteredUser} from '../helper';
 import {Diplome} from '../models';
 import {DiplomeRepository} from '../repositories';
-import { intercept } from "@loopback/core";
+import { inject, intercept } from "@loopback/core";
 import { AfterSaveDiplomeInterceptor } from "../interceptors";
 const utf8Decoder = new TextDecoder();
-
+import {SecurityBindings, UserProfile} from '@loopback/security';
 
 let blockchainClient = new BlockChainModule.BlockchainClient();
 
@@ -134,6 +134,8 @@ export class DiplomeController {
   })
 
   async findAll(
+    @inject(SecurityBindings.USER)
+    loggedInUserProfile: UserProfile,
   ): Promise<any> {
     let networkObj = await blockchainClient.connectToNetwork("enroll", "diplome", "inphbMSP");
     if (!networkObj) {

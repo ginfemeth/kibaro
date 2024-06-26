@@ -69,9 +69,8 @@ export class AfterSaveDiplomeInterceptor implements Provider<Interceptor> {
         result.phone,
         result.email,
         result.cid,
-        result.date
+        new Date().toISOString()
       );
-      console.log(rs);
       return (JSON.stringify(JSON.parse(rs.toString()), null, 2));
       }else{
         console.log('No user is logged in');

@@ -126,7 +126,7 @@ certificateAuthorities:
         -----END CERTIFICATE-----
     url: https://orderer-ca.orderer.blockchain.kibarocert.com:443
 channels:
-  _default:
+  certificates:
     orderers:
     - orderer-node1.orderer
     - orderer-node2.orderer
