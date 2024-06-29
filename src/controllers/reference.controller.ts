@@ -72,7 +72,7 @@ export class ReferenceController {
     })
     reference: Omit<Reference, 'id'>,
   ): Promise<any> {
-    let networkObj = await blockchainClient.connectToNetwork("user100", "reference", "kibarocertMSP");
+    let networkObj = await blockchainClient.connectToNetwork("enroll", "reference", "kibarocertMSP");
     if (!networkObj) {
       let errString = 'Error connecting to network';
       return 401;
@@ -151,7 +151,7 @@ export class ReferenceController {
   @authenticate('jwt')
   async findAll(
   ): Promise<any> {
-    let networkObj = await blockchainClient.connectToNetwork("user100", "reference", "kibarocertMSP");
+    let networkObj = await blockchainClient.connectToNetwork("enroll", "reference", "kibarocertMSP");
     if (!networkObj) {
       let errString = 'Error connecting to network';
       return 401;

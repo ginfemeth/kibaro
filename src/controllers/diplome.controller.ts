@@ -180,8 +180,7 @@ export class DiplomeController {
     @param.path.string('id') id: string,
     @param.filter(Diplome, {exclude: 'where'}) filter?: FilterExcludingWhere<Diplome>
   ): Promise<Diplome> {
-    let user = await getRegisteredUser("user5", "kibarocertMSP");
-    console.log(user);
+    let user = await getRegisteredUser("enroll", "kibarocertMSP");
     return this.diplomeRepository.findById(id, filter);
   }
 
@@ -197,7 +196,7 @@ export class DiplomeController {
   async findHlfById(
     @param.path.string('id') id: string,
   ): Promise<any> {
-    let networkObj = await blockchainClient.connectToNetwork("user100", "diplome", "kibarocertMSP");
+    let networkObj = await blockchainClient.connectToNetwork("enroll", "diplome", "kibarocertMSP");
     if (!networkObj) {
       let errString = 'Error connecting to network';
       return 401;

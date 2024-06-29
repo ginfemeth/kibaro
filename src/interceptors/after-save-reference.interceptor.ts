@@ -54,7 +54,6 @@ export class AfterSaveReferenceInterceptor implements Provider<Interceptor> {
       // Add post-invocation logic here
       if (this.userProfile) {
         const user =this.userService.findUserById(this.userProfile[securityId]);
-        console.log('Logged-in user:', this.userProfile);
         let networkObj = await blockchainClient.connectToNetwork(this.userProfile.name ?? 'enroll', "reference", (await user).organization);
         // let networkObj = await blockchainClient.connectToNetwork('user301', "reference", "kibarocertMSP");
         if (!networkObj) {
