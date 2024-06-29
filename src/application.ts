@@ -17,6 +17,7 @@ import { MySequence } from './sequence';
 import { MyUserService } from './services/user.service';
 import { UserServiceBindings } from "./keys";
 import { AfterSaveDiplomeInterceptor, AfterSaveReferenceInterceptor } from "./interceptors";
+import { MailService } from "./services/mail.service";
 
 export { ApplicationConfig };
 
@@ -44,6 +45,7 @@ export class KibaroApplication extends BootMixin(
     this.component(RestExplorerComponent);
     // Bind user service
     this.bind(UserServiceBindings.USER_SERVICE).toClass(MyUserService),
+    this.bind('services.MailService').toClass(MailService);
     // this.bind('interceptors.UserProfileInterceptor').toProvider(AfterSaveDiplomeInterceptor);
     // this.bind('interceptors.UserProfileInterceptor').toProvider(AfterSaveReferenceInterceptor);
     this.projectRoot = __dirname;

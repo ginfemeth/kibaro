@@ -38,6 +38,14 @@ export class Contact extends Entity {
   })
   pays?: string;
 
+  @property({
+    type: 'string',
+    mongodb: {
+      dataType: 'text'
+  }
+  })
+  message?: string;
+
 
   constructor(data?: Partial<Contact>) {
     super(data);
